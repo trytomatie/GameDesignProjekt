@@ -5,8 +5,10 @@ using UnityEngine;
 public class BasicTurretAI : MonoBehaviour
 {
 
-    public StatusManager target;
+    public Transform target;
     private StatusManager myStatus;
+    public GameObject projectilePrefab;
+    public float attackRadius = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +21,48 @@ public class BasicTurretAI : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void CheckAttack()
     {
-        StatusManager otherStatus = collision.gameObject.GetComponent<StatusManager>();
-        if (otherStatus != null && otherStatus.faction != myStatus.faction)
+        if (Vector3.Distance(target.transform.position, transform.position) < attackRadius)
         {
-            ApplyDamage(otherStatus);
+            // Attack
+        }
+        else
+        {
+            
         }
     }
+
+    private void ShootProjectile()
+    {
+        GameObject go = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Projectile projectile = go.GetComponent<Projectile>();
+        projectile.Instanciate(myStatus, myStatus.damage, target, true);
+    }
+
+    private bool FindTarget()
+    {
+        StatusManager[] targets = GameObject.FindObjectsOfType<StatusManager>(true);
+        float distance = 1000;
+        foreach (StatusManager target in targets)
+        {
+            if(target.faction == myStatus.faction)
+            {
+                continue;
+            }
+            float targetDistance = Vector2.Distance(transform.position, target.transform.position);
+            if (targetDistance < distance && target.GetComponent<StatusManager>().Hp > 0)
+            {
+                distance = targetDistance;
+                this.target = target.transform;
+            }
+        }
+        if (target != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
 
 }

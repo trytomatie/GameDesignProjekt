@@ -15,6 +15,7 @@ public class StatusManager : MonoBehaviour
 
     public int hp =10;
     public int maxHp = 10;
+    public int damage = 1;
     public float resistance = 0;
 
     public UnityEvent deathEvent;
