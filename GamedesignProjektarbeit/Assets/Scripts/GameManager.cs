@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public static Vector2 NormalizedDirection(Vector2 origin, Vector2 target)
     {
-        Vector2 dir = (origin - target).normalized;
+        Vector2 dir = (target - origin).normalized;
         return dir;
         // test
     }

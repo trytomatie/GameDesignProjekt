@@ -9,6 +9,10 @@ public class BasicTurretAI : MonoBehaviour
     private StatusManager myStatus;
     public GameObject projectilePrefab;
     public float attackRadius = 4;
+    public bool attackOnCooldown = false;
+
+    public bool locksOnTarget = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +22,16 @@ public class BasicTurretAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FindTarget();
+        CheckAttack();
     }
 
     private void CheckAttack()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) < attackRadius)
+        if (Vector3.Distance(target.transform.position, transform.position) < attackRadius && !attackOnCooldown)
         {
             // Attack
+            ShootProjectile();
         }
         else
         {
@@ -37,8 +43,19 @@ public class BasicTurretAI : MonoBehaviour
     {
         GameObject go = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();
-        projectile.Instanciate(myStatus, myStatus.damage, target, true);
+        projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
+        attackOnCooldown = true;
+        float attackCooldown =  1 / myStatus.attackspeed;
+        Invoke("AttackCooldown", attackCooldown);
+        
     }
+
+    private void AttackCooldown()
+    {
+        attackOnCooldown = false;
+    }
+
+    
 
     private bool FindTarget()
     {
