@@ -19,6 +19,7 @@ public class StatusManager : MonoBehaviour
     public float resistance = 0;
     public float attackspeed = 1;
     public float projectileSpeed = 2;
+    public float size = 0.2f;
 
     public UnityEvent deathEvent;
     public UnityEvent damageEvent;
@@ -43,13 +44,14 @@ public class StatusManager : MonoBehaviour
         hp -= Mathf.RoundToInt(damage * (1 - resistance));
     }
 
-    public int Hp 
-    { 
+    public int Hp
+    {
         get => hp;
-        set 
+        set
         {
             deathEvent.Invoke();
             hp = value;
         }
     }
+
 }

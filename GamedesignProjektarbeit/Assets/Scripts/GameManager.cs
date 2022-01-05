@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UnitButton.PositionTargetedUnit();
+        UnitButton.CheckForPlaceUnit();
     }
 
     public static Vector2 NormalizedDirection(Vector2 origin, Vector2 target)
