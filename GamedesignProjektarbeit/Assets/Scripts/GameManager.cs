@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public int dna = 100;
+    public static GameManager instance;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
     }
 
     // Update is called once per frame

@@ -11,8 +11,11 @@ public class StatusManager : MonoBehaviour
 {
     public enum Faction  {Player,Enemy};
 
-    public Faction faction;
+    public string entityName = "Unknown";
+    public string description = "An unknown cell. Beware!";
+    public int dnaCost = 3;
 
+    public Faction faction;
     public int hp =10;
     public int maxHp = 10;
     public int damage = 1;
@@ -20,6 +23,8 @@ public class StatusManager : MonoBehaviour
     public float attackspeed = 1;
     public float projectileSpeed = 2;
     public float size = 0.2f;
+
+    public bool isActive = false;
 
     public UnityEvent deathEvent;
     public UnityEvent damageEvent;

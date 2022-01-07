@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles unit Placement and Purchases 
+/// by Christian Scherzer
+/// </summary>
 public class UnitButton : MonoBehaviour
 {
 
@@ -20,6 +24,9 @@ public class UnitButton : MonoBehaviour
     {
     }
 
+    /// <summary>
+    /// Moves Unit to Curosr
+    /// </summary>
     public static void PositionTargetedUnit()
     {
         if(targetedUnit != null)
@@ -28,6 +35,9 @@ public class UnitButton : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Check Unit Placement
+    /// </summary>
     public static void CheckForPlaceUnit()
     {
         if(holdingUnit)
@@ -45,24 +55,88 @@ public class UnitButton : MonoBehaviour
             {
                 PlaceUnit();
             }
+            if(Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+            {
+                EraseUnit();
+            }
 
         }
     }
 
-    static void PlaceUnit()
+    /// <summary>
+    /// Erases Unit
+    /// </summary>
+    private static void EraseUnit()
     {
-        targetedUnit = null;
         holdingUnit = false;
-        print("unit Placed");
+        Destroy(targetedUnit);
+        targetedUnit = null;
     }
 
+    /// <summary>
+    /// Places Unit 
+    /// </summary>
+    private static void PlaceUnit()
+    {
+        if(PurchaseUnit(targetedUnit))
+        {
+            targetedUnit = null;
+            holdingUnit = false;
+        }
+        else
+        {
+            EraseUnit();
+        }
+
+        print("Unit Placed");
+    }
+
+    /// <summary>
+    /// Selects Unit
+    /// </summary>
     public void SelectUnit()
     {
         if(holdingUnit == false)
         {
             holdingUnit = true;
             targetedUnit = Instantiate(einheit, new Vector3(1000,0,0), Quaternion.identity);
-            
+        }
+    }
+
+    /// <summary>
+    /// Checks cost of Unit
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <returns></returns>
+    private static bool CheckForCost(StatusManager unit)
+    {
+        if(GameManager.instance.dna >= unit.dnaCost)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Purchases Unit and sets it active
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <returns></returns>
+    private static bool PurchaseUnit(GameObject unit)
+    {
+        StatusManager unitStatus = unit.GetComponent<StatusManager>();
+        if (CheckForCost(unitStatus))
+        {
+            GameManager.instance.dna -= unitStatus.dnaCost;
+            unitStatus.isActive = true;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
