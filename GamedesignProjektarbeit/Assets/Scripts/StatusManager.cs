@@ -23,6 +23,7 @@ public class StatusManager : MonoBehaviour
     public float attackspeed = 1;
     public float projectileSpeed = 2;
     public float size = 0.2f;
+    public float moveSpeed = 0.5f;
 
     public bool isActive = false;
 
