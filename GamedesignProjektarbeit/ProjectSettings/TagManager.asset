@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
     locked: 0
   - name: Bakteria
     uniqueID: 192992849
+    locked: 0
+  - name: Organs
+    uniqueID: 193230959
     locked: 0
