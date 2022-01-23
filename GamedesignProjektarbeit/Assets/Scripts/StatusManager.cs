@@ -43,11 +43,18 @@ public class StatusManager : MonoBehaviour
         
     }
 
+    private void BaseDeathEvent()
+    {
+        Destroy(gameObject);
+        GameManager.instance.Dna += dnaCost;
+    }
+
 
     public void ApplyDamage(int damage)
     {
+       
         damageEvent.Invoke();
-        hp -= Mathf.RoundToInt(damage * (1 - resistance));
+        Hp -= Mathf.RoundToInt(damage * (1 - resistance));
     }
 
     public int Hp
@@ -55,7 +62,19 @@ public class StatusManager : MonoBehaviour
         get => hp;
         set
         {
-            deathEvent.Invoke();
+            if(value <= 0)
+            {
+                if(deathEvent == null)
+                {
+                    deathEvent.Invoke();
+                }
+                else
+                {
+                    BaseDeathEvent();
+                }
+                
+            }
+            
             hp = value;
         }
     }

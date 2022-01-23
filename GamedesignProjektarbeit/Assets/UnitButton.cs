@@ -12,7 +12,7 @@ public class UnitButton : MonoBehaviour
     public GameObject einheit;
     public static bool holdingUnit;
     public static GameObject targetedUnit;
-
+    public static bool placeDelay;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,6 @@ public class UnitButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(targetedUnit);
     }
 
     /// <summary>
@@ -41,7 +40,7 @@ public class UnitButton : MonoBehaviour
     /// </summary>
     public static void CheckForPlaceUnit()
     {
-        if(holdingUnit)
+        if(holdingUnit && !placeDelay)
         {
             bool canPlace = true;
             RaycastHit2D[] raycastHits =  Physics2D.CircleCastAll(targetedUnit.transform.position, targetedUnit.GetComponent<CircleCollider2D>().radius * targetedUnit.transform.localScale.x, Vector2.zero);
@@ -99,9 +98,16 @@ public class UnitButton : MonoBehaviour
     {
         if(holdingUnit == false)
         {
+            placeDelay = true;
+            Invoke("DisableDelay", 0.3f);
             holdingUnit = true;
             targetedUnit = Instantiate(einheit, new Vector3(1000,0,0), Quaternion.identity);
         }
+    }
+
+    private void DisableDelay()
+    {
+        placeDelay = false;
     }
 
     /// <summary>
@@ -111,7 +117,7 @@ public class UnitButton : MonoBehaviour
     /// <returns></returns>
     private static bool CheckForCost(StatusManager unit)
     {
-        if(GameManager.instance.dna >= unit.dnaCost)
+        if(GameManager.instance.Dna >= unit.dnaCost)
         {
             return true;
         }
@@ -131,7 +137,7 @@ public class UnitButton : MonoBehaviour
         StatusManager unitStatus = unit.GetComponent<StatusManager>();
         if (CheckForCost(unitStatus))
         {
-            GameManager.instance.dna -= unitStatus.dnaCost;
+            GameManager.instance.Dna -= unitStatus.dnaCost;
             unitStatus.isActive = true;
             return true;
         }

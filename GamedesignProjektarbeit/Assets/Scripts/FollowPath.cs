@@ -13,6 +13,16 @@ public class FollowPath : MonoBehaviour
     void Start()
     {
         sm = GetComponent <StatusManager> ();
+        if(waypoints.Length == 0)
+        {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("Waypoint");
+            waypoints = new Transform[gos.Length];
+            for (int i = 0; i < gos.Length; i++)
+            {
+                waypoints[i] = gos[i].GetComponent<Transform>();
+            }
+               
+        }
     }
 
     // Update is called once per frame

@@ -28,7 +28,7 @@ public class BasicTurretAI : MonoBehaviour
 
     private void CheckAttack()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) < attackRadius && !attackOnCooldown)
+        if (target != null && Vector3.Distance(target.transform.position, transform.position) < attackRadius && !attackOnCooldown)
         {
             // Attack
             ShootProjectile();
@@ -45,7 +45,7 @@ public class BasicTurretAI : MonoBehaviour
         Projectile projectile = go.GetComponent<Projectile>();
         projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
         attackOnCooldown = true;
-        float attackCooldown =  1 / myStatus.attackspeed;
+        float attackCooldown =  Mathf.Clamp(1 / myStatus.attackspeed,0.01f,100f);
         Invoke("AttackCooldown", attackCooldown);
         
     }

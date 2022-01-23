@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
-    public int dna = 100;
+    private int dna = 100;
     public static GameManager instance;
+    public TextMeshProUGUI dnaText;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         if(instance == null)
         {
+            SetDNAText(dna);
             instance = this;
         }
         else
@@ -32,5 +38,19 @@ public class GameManager : MonoBehaviour
         Vector2 dir = (target - origin).normalized;
         return dir;
         // test
+    }
+
+    private void SetDNAText(int amount)
+    {
+        dnaText.text = amount.ToString();
+    }
+    public int Dna 
+    { 
+        get => dna;
+        set 
+        {
+            SetDNAText(value);
+            dna = value;
+        }
     }
 }

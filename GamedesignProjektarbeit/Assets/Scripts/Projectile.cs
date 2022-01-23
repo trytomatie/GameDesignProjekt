@@ -43,15 +43,19 @@ public class Projectile : MonoBehaviour
         else
         {
             // Moves forward if no specified target
-            rb.velocity = transform.right * projectileSpeed; 
+            //rb.velocity = transform.right * projectileSpeed; 
+
+            // Moves to last target Position
+            rb.velocity = targetDirectionOnAttackDeclaration * projectileSpeed;
         }
     }
 
     private void MoveToTarget(Transform target)
     {
-        if(lockOn)
+        if(lockOn && target != null)
         {
             rb.velocity = GameManager.NormalizedDirection(transform.position, (Vector2)target.position) * projectileSpeed;
+            targetDirectionOnAttackDeclaration = GameManager.NormalizedDirection(transform.position, (Vector2)target.position);
         }
         else
         {
