@@ -11,7 +11,7 @@ public class DescriptionManager : MonoBehaviour
     public Image sprite;
     public TextMeshProUGUI descriptionText;
     public GameObject descriptionPanel;
-
+    public StatusManager currentObject;
     public static DescriptionManager instance;
 
 
@@ -41,13 +41,20 @@ public class DescriptionManager : MonoBehaviour
 
     public void OpenDescription(Sprite sprite, StatusManager statusmanager)
     {
-        string descText = "Name: " + statusmanager.entityName +"\n"+
-            "Level: " + statusmanager.level + "\n" +
-            "Attackdamage: " + statusmanager.damage + "\n" +
-            "Attackspeed: " + statusmanager.attackspeed + "\n" +
-            "Upgradecost: " + statusmanager.dnaCost * 1.3f;
-        descriptionText.text = descText;
+        currentObject = statusmanager;
+        LoadDescription();
+
         descriptionPanel.SetActive(true);
+    }
+
+    public void LoadDescription()
+    {
+        string descText = "Name: " + currentObject.entityName + "\n" +
+            "Level: " + currentObject.level + "\n" +
+            "Attackdamage: " + currentObject.damage + "\n" +
+            "Attackspeed: " + currentObject.attackspeed + "\n" +
+            "Upgradecost: " + currentObject.dnaCost * 2f;
+        descriptionText.text = descText;
     }
 
     public void CloseDescription()
