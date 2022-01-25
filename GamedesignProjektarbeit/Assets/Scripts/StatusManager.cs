@@ -16,6 +16,7 @@ public class StatusManager : MonoBehaviour
     public int dnaCost = 3;
 
     public Faction faction;
+    public int level = 1;
     public int hp =10;
     public int maxHp = 10;
     public int damage = 1;

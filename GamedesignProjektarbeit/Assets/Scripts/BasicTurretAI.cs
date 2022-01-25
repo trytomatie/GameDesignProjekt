@@ -41,7 +41,7 @@ public class BasicTurretAI : MonoBehaviour
 
     private void ShootProjectile()
     {
-        GameObject go = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject go = Instantiate(projectilePrefab, transform.position - new Vector3(0,0,-10), Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();
         projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
         attackOnCooldown = true;

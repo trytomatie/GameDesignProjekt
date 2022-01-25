@@ -80,6 +80,12 @@ public class UnitButton : MonoBehaviour
     {
         if(PurchaseUnit(targetedUnit))
         {
+            Behaviour[] allCoponents = targetedUnit.GetComponents<Behaviour>();
+            foreach (Behaviour component in allCoponents)
+            {
+                component.enabled = true;
+            }
+            targetedUnit.GetComponent<SpriteRenderer>().color = Color.white;
             targetedUnit = null;
             holdingUnit = false;
         }

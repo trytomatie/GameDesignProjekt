@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4055985886497704779}
   - component: {fileID: 3953781953275158476}
   - component: {fileID: 7194692075637240622}
+  - component: {fileID: -4183074478160872913}
   m_Layer: 0
   m_Name: UNIT(PLACEHOLDER)
   m_TagString: Untagged
@@ -75,11 +76,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c847183944add8e498f5eb5c2c8156e5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.48235294}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.78, y: 1.78}
+  m_DrawMode: 1
+  m_Size: {x: 19.58, y: 19.58}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -92,7 +93,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5792028745557769535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.89
+  m_Radius: 7.6257634
 --- !u!114 &3953781953275158476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5792028745557769535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdcb328438191cd42ab380cde4ba006c, type: 3}
   m_Name: 
@@ -117,6 +118,7 @@ MonoBehaviour:
   description: An unknown cell. Beware!
   dnaCost: 3
   faction: 0
+  level: 1
   hp: 10
   maxHp: 10
   damage: 1
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5792028745557769535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 519cd8a8310f7254a92d8d15a714f126, type: 3}
   m_Name: 
@@ -149,3 +151,16 @@ MonoBehaviour:
   attackRadius: 40
   attackOnCooldown: 0
   locksOnTarget: 1
+--- !u!114 &-4183074478160872913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792028745557769535}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12951b19ea46c040839fca67919f1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 708837d2ad7472d4eb4973a65b4758ab, type: 3}
