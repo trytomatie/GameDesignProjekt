@@ -46,6 +46,12 @@ public class Organ : MonoBehaviour
             
             //mache das der gegner angreift
             enemyAnimator.SetBool("isAttacking", true);
+
+
+            SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
+            enemyBakteria.GetComponent<Collider2D>().enabled = false;
+
+
             TakeDamage(10);
             //zerstöre das Andere GameObject nach dem ende seiner Animation
             Destroy(other.gameObject, 2f);

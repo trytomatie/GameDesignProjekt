@@ -46,7 +46,6 @@ public class StatusManager : MonoBehaviour
     private void BaseDeathEvent()
     {
         Destroy(gameObject);
-        GameManager.instance.Dna += dnaCost;
     }
 
 
@@ -64,13 +63,15 @@ public class StatusManager : MonoBehaviour
         {
             if(value <= 0)
             {
-                if(deathEvent == null)
+                if(deathEvent != null)
                 {
                     deathEvent.Invoke();
+                    GameManager.instance.Dna += dnaCost;
                 }
                 else
                 {
                     BaseDeathEvent();
+                    GameManager.instance.Dna += dnaCost;
                 }
                 
             }

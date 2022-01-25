@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -18,20 +19,39 @@ public class SpawnManager : MonoBehaviour
 
     public float spawnDelay = 5f;
 
+    public static SpawnManager instance;
+
+    public TextMeshProUGUI roundCount;
+
     private int spawnedEnemies;
     private int currentWave = 1;
     private int maxWave = 2;
     private bool hasRoundEnded = false;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        StartNewWave();
+        if (instance == null)
+        {
+            StartNewWave();
+
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
+        
     }
 
     void Update()
     {
         CheckWaveEnd();
+
+        roundCount.text = "Runde " + currentWave + "/" + waves.Length;
     }
 
     /// <summary>
@@ -85,6 +105,8 @@ public class SpawnManager : MonoBehaviour
 
             Invoke("StartNewWave", 30f);
             currentWave = currentWave + 1;
+
+            print("Ende");
         }
     }
 

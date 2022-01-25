@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5792028745557769535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0294905, y: 1.2479829, z: -4.4792037}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   maxHp: 10
   damage: 1
   resistance: 0
-  attackspeed: 1
+  attackspeed: 9.63
   projectileSpeed: 50
   size: 0.2
   moveSpeed: 0.5
