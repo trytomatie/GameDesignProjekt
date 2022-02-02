@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy : MonoBehaviour
 {
 
 
     public AnimationClip dieAni;
+    public AnimationClip attackAni;
+    public float dealDamage=10;
+
 
     private Animator enemyAnimator;
     private Vector2 currentPos;
@@ -24,6 +28,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovemenAni();
+    }
+
+    private void MovemenAni()
+    {
         currentPos = new Vector2(transform.position.x, transform.position.y);           //set current Position
         float walkingDistance = Mathf.Abs(Vector2.Distance(currentPos, lastPos));       //measure the distance between current and last position in order to get a movenent speed
 
@@ -31,6 +40,27 @@ public class Enemy : MonoBehaviour
 
         lastPos = currentPos;                                                           //set last position to current position for next update
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        print("trigger entered");
+        //Wenn ein Organ in reichweite kommt soll er Schaden nehmen
+        if (other.gameObject.CompareTag("Organ"))
+        {
+            
+            enemyAnimator.SetBool("isAttacking", true);
+            Destroy(gameObject, attackAni.length);
+
+            var organScript = other.gameObject.GetComponent<Organ>();
+            organScript.OrganTakeDamage(dealDamage);
+
+
+
+            SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
+            GetComponent<Collider2D>().enabled = false;
+        }
+    }
+ 
 
     public void DamageEvent()
     {

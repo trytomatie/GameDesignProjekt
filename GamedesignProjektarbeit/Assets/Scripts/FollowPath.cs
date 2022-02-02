@@ -35,7 +35,7 @@ public class FollowPath : MonoBehaviour
     {
 
         // Enemy can only move if the last Waypoint isn't reached
-        if (currentWaypoint < waypoints.Length - 1)
+        if (currentWaypoint <= waypoints.Length - 1)
         {
             transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypoint].transform.position, sm.moveSpeed * Time.deltaTime);
 

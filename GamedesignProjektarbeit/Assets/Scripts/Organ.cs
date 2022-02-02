@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Organ : MonoBehaviour
 {
 
@@ -33,38 +34,12 @@ public class Organ : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        print("collision");
-        //Wenn ein gegner in reichweite kommt soll er Schaden nehmen
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            organAnimator.SetTrigger("getDamage");
-            //bekomme die feindlichen Bakterie und den Animator 
-            GameObject enemyBakteria = other.gameObject;
-            Animator enemyAnimator = other.GetComponent<Animator>();
-            
-            //mache das der gegner angreift
-            enemyAnimator.SetBool("isAttacking", true);
 
-
-            SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
-            enemyBakteria.GetComponent<Collider2D>().enabled = false;
-
-
-            TakeDamage(10);
-            //zerstöre das Andere GameObject nach dem ende seiner Animation
-            Destroy(other.gameObject, 2f);
-            
-            //print(enemyAnimator.GetCurrentAnimatorClipInfo(0).Length);
-            
-        }
-    }
-
-    public void TakeDamage(float damage)
+    public void OrganTakeDamage(float damage)
     {
         if (alive)
         {
+            organAnimator.SetTrigger("getDamage"); // spiele die Animation get Damage ab
             //Ziehe den Schaden vom Aktuellen Leben ab
             currentHealth = currentHealth - damage;
             //berechne den Prozentwert Für die Healthbar
