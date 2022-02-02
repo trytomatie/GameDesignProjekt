@@ -1286,6 +1286,7 @@ MonoBehaviour:
   description: An unknown cell. Beware!
   dnaCost: 3
   faction: 1
+  level: 1
   hp: 10
   maxHp: 10
   damage: 1
@@ -1312,7 +1313,19 @@ MonoBehaviour:
         m_CallState: 2
   damageEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 647429138322237777}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: DamageEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-147626195389950075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,6 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d2df4ec2fbe9b40b074ab81550d42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dieAni: {fileID: 7400000, guid: 4bb3949556961314ebb7f6bbafc1c0d5, type: 2}
 --- !u!1 &5072542269734515394
 GameObject:
   m_ObjectHideFlags: 0
