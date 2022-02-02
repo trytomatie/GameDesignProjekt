@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 08303459a791d4148b9c6a04979d9b84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8633881525917383573
+    second: Gegner3Lichtreflex_4
+  - first:
+      213: -1771866121167276815
+    second: Gegner3Lichtreflex_3
+  - first:
+      213: 2091829175261615561
+    second: Gegner3Droplet_17
+  - first:
+      213: 756911166660455246
+    second: Gegner3Droplet_15
+  - first:
+      213: 403005533434085257
+    second: Gegner3Droplet_13
+  - first:
+      213: 6961653080833796888
+    second: Gegner3Droplet_10
+  - first:
+      213: 6266472923241529454
+    second: Gegner3Droplet_7
+  - first:
+      213: -5282911695883833476
+    second: Gegner3Lichtreflex_2
+  - first:
+      213: 7021449457718125206
+    second: Gegner3Droplet_16
+  - first:
+      213: 7357123456376359846
+    second: Gegner3Droplet_14
+  - first:
+      213: -7343860702648896561
+    second: Gegner3Droplet_12
+  - first:
+      213: -3531878321590394162
+    second: Gegner3Droplet_9
+  - first:
+      213: -4888718896546230129
+    second: Gegner3Droplet_11
+  - first:
+      213: 2118958311618589481
+    second: Gegner3Droplet_8
+  - first:
+      213: 3228903892712671954
+    second: Gegner3Droplet_6
+  - first:
+      213: -513590313336307935
+    second: Gegner3Droplet_5
+  - first:
+      213: 1238036043553056152
+    second: Gegner3Lichtreflex_1
+  - first:
+      213: -1623444342149152459
+    second: MainBodyGegner3
+  - first:
+      213: -1125653685376602382
+    second: Gegner3Droplet_4
+  - first:
+      213: 8527111519951476930
+    second: Gegner3Droplet_3
+  - first:
+      213: -7490898752223310767
+    second: Gegner3Droplet_2
+  - first:
+      213: 6288659706726585256
+    second: Gegner3Droplet_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gegner3Lichtreflex_4
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1897
+        width: 87
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bfc19e085b1d770800000000000000
+      internalID: 8633881525917383573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Lichtreflex_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1925
+        width: 118
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4764a86211967e0800000000000000
+      internalID: -1771866121167276815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_17
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1873
+        width: 74
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5544a4d8ba70d10800000000000000
+      internalID: 2091829175261615561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_15
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1808
+        width: 102
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ba25f12b6118a00800000000000000
+      internalID: 756911166660455246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_13
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1919
+        width: 62
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ffadeb563c79500800000000000000
+      internalID: 403005533434085257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_10
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1866
+        width: 191
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b2a94b792cc9060800000000000000
+      internalID: 6961653080833796888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_7
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1808
+        width: 97
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e604a682cebf6f650800000000000000
+      internalID: 6266472923241529454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Lichtreflex_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1520
+        width: 484
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f661b7dc35fa6b0800000000000000
+      internalID: -5282911695883833476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_16
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1680
+        width: 202
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692e5af9413317160800000000000000
+      internalID: 7021449457718125206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_14
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1549
+        width: 119
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abc10acdc0c91660800000000000000
+      internalID: 7357123456376359846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_12
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1711
+        width: 85
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc379a2b99d551a90800000000000000
+      internalID: -7343860702648896561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_9
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1720
+        width: 123
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2a3b3116f3cfec0800000000000000
+      internalID: -3531878321590394162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_11
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1541
+        width: 86
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f805f9ca018c72cb0800000000000000
+      internalID: -4888718896546230129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_8
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1548
+        width: 104
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92333e19b5d086d10800000000000000
+      internalID: 2118958311618589481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_6
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 1562
+        width: 154
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dac303abfe5fcc20800000000000000
+      internalID: 3228903892712671954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_5
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 1462
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ff185c45c5fd8f0800000000000000
+      internalID: -513590313336307935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Lichtreflex_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 956
+        width: 666
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8952c13e8336e2110800000000000000
+      internalID: 1238036043553056152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainBodyGegner3
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 109
+        width: 1000
+        height: 1298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5310591e8fd5879e0800000000000000
+      internalID: -1623444342149152459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 602
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fea407efefd060f0800000000000000
+      internalID: -1125653685376602382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_3
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 635
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c859d2bfb2665670800000000000000
+      internalID: 8527111519951476930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 571
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c0059f54bfa0890800000000000000
+      internalID: -7490898752223310767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gegner3Droplet_1
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 589
+        width: 50
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a310cc3faec54750800000000000000
+      internalID: 6288659706726585256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f76effa86019d1841a1657663233f124
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
