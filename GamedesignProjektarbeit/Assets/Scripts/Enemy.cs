@@ -20,8 +20,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyAnimator = GetComponent<Animator>();       //get Animator Component
-        currentPos = new Vector2(transform.position.x, transform.position.y);   //set both Positions so there are not null
+        enemyAnimator = GetComponent<Animator>();       //get Animator Component (Markus)
+        currentPos = new Vector2(transform.position.x, transform.position.y);   //set both Positions so there are not null (Markus)
         lastPos = new Vector2(transform.position.x, transform.position.y);      
     }
 
@@ -33,30 +33,30 @@ public class Enemy : MonoBehaviour
 
     private void MovemenAni()
     {
-        currentPos = new Vector2(transform.position.x, transform.position.y);           //set current Position
-        float walkingDistance = Mathf.Abs(Vector2.Distance(currentPos, lastPos));       //measure the distance between current and last position in order to get a movenent speed
+        currentPos = new Vector2(transform.position.x, transform.position.y);           //set current Position (Markus)
+        float walkingDistance = Mathf.Abs(Vector2.Distance(currentPos, lastPos));       //measure the distance between current and last position in order to get a movenent speed (Markus)
 
-        enemyAnimator.SetFloat("movementSpeed", walkingDistance);                       //change movement speed im animator so it plays walking animation
+        enemyAnimator.SetFloat("movementSpeed", walkingDistance);                       //change movement speed im animator so it plays walking animation (Markus)
 
-        lastPos = currentPos;                                                           //set last position to current position for next update
+        lastPos = currentPos;                                                           //set last position to current position for next update (Markus)
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)                                     
     {
-        print("trigger entered");
+        
         //Wenn ein Organ in reichweite kommt soll er Schaden nehmen
-        if (other.gameObject.CompareTag("Organ"))
+        if (other.gameObject.CompareTag("Organ"))                                       //Wenn der Gegner auf das Organ trifft soll Schaden ausgeteilt werden (Markus)
         {
             
-            enemyAnimator.SetBool("isAttacking", true);
-            Destroy(gameObject, attackAni.length);
+            enemyAnimator.SetBool("isAttacking", true);                                 //Attack Animation des Gegners wird ausgeführt (Markus)
+            Destroy(gameObject, attackAni.length);                                      //Nach der Animation wird der Gegner getoetet (Markus)
 
-            var organScript = other.gameObject.GetComponent<Organ>();
+            var organScript = other.gameObject.GetComponent<Organ>();                   //bekomme das Scriptes des Organs und erteile Schaden (Markus)
             organScript.OrganTakeDamage(dealDamage);
 
 
 
-            SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
+            SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;    
             GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
 
     public void DamageEvent()
     {
-        enemyAnimator.SetTrigger("getDamage");                                          //if event is triggered play animation
+        enemyAnimator.SetTrigger("getDamage");                                          //if event is triggered play animation (Markus)
     }
 
 

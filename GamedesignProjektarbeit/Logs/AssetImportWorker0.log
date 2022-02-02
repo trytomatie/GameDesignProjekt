@@ -15,11 +15,11 @@ D:/Git/GameDesign/GameDesignProjekt/GamedesignProjektarbeit
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58582
+58040
 Successfully changed project path to: D:/Git/GameDesign/GameDesignProjekt/GamedesignProjektarbeit
 D:/Git/GameDesign/GameDesignProjekt/GamedesignProjektarbeit
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 62.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path D:/Unity/Versions/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Versions/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Versions/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/Versions/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56052
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Versions/2020.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,37 +43,37 @@ Register platform support module: D:/Unity/Versions/2020.3.18f1/Editor/Data/Play
 Register platform support module: D:/Unity/Versions/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Unity/Versions/2020.3.18f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: D:/Unity/Versions/2020.3.18f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.002185 seconds.
+Registered in 0.002215 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 57.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 56.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.345 seconds
+- Completed reload, in  1.319 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1345ms)
+	ReloadAssembly (1319ms)
 		BeginReloadAssembly (63ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (410ms)
+		EndReloadAssembly (411ms)
 			LoadAssemblies (64ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (144ms)
+			SetupTypeCache (143ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (173ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (177ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (57ms)
+				RefreshPlugins (56ms)
 				BeforeProcessingInitializeOnLoad (15ms)
-				ProcessInitializeOnLoadAttributes (70ms)
+				ProcessInitializeOnLoadAttributes (74ms)
 				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -81,38 +81,38 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003550 seconds.
+Registered in 0.003454 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 54.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 53.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.107 seconds
+- Completed reload, in  1.106 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1108ms)
-		BeginReloadAssembly (155ms)
+	ReloadAssembly (1107ms)
+		BeginReloadAssembly (152ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
+			CreateAndSetChildDomain (18ms)
 		EndReloadAssembly (900ms)
-			LoadAssemblies (113ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (302ms)
+			SetupTypeCache (304ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (340ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (337ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (54ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (188ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (187ms)
 				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
@@ -122,14 +122,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3130 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 138.7 MB.
-System memory in use after: 138.9 MB.
+Unloading 3131 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.0 MB.
+System memory in use after: 141.2 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3564.
-Total: 3.364700 ms (FindLiveObjects: 0.248500 ms CreateObjectMapping: 0.103900 ms MarkObjects: 2.942900 ms  DeleteObjects: 0.068600 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3565.
+Total: 3.442100 ms (FindLiveObjects: 0.261000 ms CreateObjectMapping: 0.120500 ms MarkObjects: 2.993400 ms  DeleteObjects: 0.066400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -143,25 +143,33 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+  path: Assets/Prefabs/Gegner1.prefab
+  artifactKey: Guid(bfb32f021ab24f34992c3b0a1e82e1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gegner1.prefab using Guid(bfb32f021ab24f34992c3b0a1e82e1ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150843ce5bd34e3898cd73b1a090b26f') in 0.257829 seconds 
+  Import took 0.263516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
   path: Assets/Prefabs/Gegner2.prefab
   artifactKey: Guid(35be5a10b7d79d9448a087334ccf700e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Gegner2.prefab using Guid(35be5a10b7d79d9448a087334ccf700e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38d90ff4890426c0b724f95a75593e0') in 0.248949 seconds 
-  Import took 0.253807 seconds .
+Start importing Assets/Prefabs/Gegner2.prefab using Guid(35be5a10b7d79d9448a087334ccf700e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8a1a6a227906a9a15cf98f6d7a8b91') in 0.076529 seconds 
+  Import took 0.082020 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.610577 seconds.
-  path: Assets/Scenes/Animation Playground.unity
-  artifactKey: Guid(ee75963a0bbe19340840261f62ac9968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animation Playground.unity using Guid(ee75963a0bbe19340840261f62ac9968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85ff05ccff9201ef653a954900ce482') in 0.024150 seconds 
-  Import took 0.028459 seconds .
+  Time since last request: 9.791628 seconds.
+  path: Assets/Prefabs/MacrophageTest.prefab
+  artifactKey: Guid(e6ae95f17d6547b46813348ad09f61e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MacrophageTest.prefab using Guid(e6ae95f17d6547b46813348ad09f61e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f29d286716bd77e215ffc591a36ac3') in 0.042256 seconds 
+  Import took 0.046746 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 30.201919 seconds.
-  path: Assets/Prefabs/Gegner3.prefab
-  artifactKey: Guid(ad8f2ce911845374fbed0b48b5bf9e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Gegner3.prefab using Guid(ad8f2ce911845374fbed0b48b5bf9e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d8d5d8bc21089ecbe562c1d04af1a72') in 0.075476 seconds 
-  Import took 0.082891 seconds .
+  Time since last request: 4.288170 seconds.
+  path: Assets/Prefabs/Macrophage.prefab
+  artifactKey: Guid(93cabcd0a8f598041a0ecafb469b592f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Macrophage.prefab using Guid(93cabcd0a8f598041a0ecafb469b592f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '781af5370f27e23b99226a4b3a6ee4b3') in 0.068600 seconds 
+  Import took 0.074812 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

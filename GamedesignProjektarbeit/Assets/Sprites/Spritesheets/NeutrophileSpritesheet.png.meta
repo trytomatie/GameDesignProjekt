@@ -1,12 +1,111 @@
 fileFormatVersion: 2
 guid: d25b5d2bc7c24ce42b37805f54e195c2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6368798957549633779
+    second: NeutrophilePunkt_4
+  - first:
+      213: 3249294764499556270
+    second: NeutrophilePunkt_5
+  - first:
+      213: 4575893379048325872
+    second: NeutrophilePunkt_7
+  - first:
+      213: -6573686141290079920
+    second: NeutrophilePunkt_8
+  - first:
+      213: 1227793034465214464
+    second: NeutrophilePunkt_10
+  - first:
+      213: 6549748800660556884
+    second: NeutrophilePunkt_12
+  - first:
+      213: 2367437721529797259
+    second: NeutrophilePunkt_14
+  - first:
+      213: 4675722675159450090
+    second: NeutrophilePunkt_16
+  - first:
+      213: 3469917523430761022
+    second: NeutrophilePunkt_6
+  - first:
+      213: 2626395363633711640
+    second: NeutrophilePunkt_9
+  - first:
+      213: 8791579314296914313
+    second: NeutrophilePunkt_11
+  - first:
+      213: -2206000026950404509
+    second: NeutrophilePunkt_13
+  - first:
+      213: 8719045006972016520
+    second: NeutrophilePunkt_18
+  - first:
+      213: -6506605636886658209
+    second: NeutrophilePunkt_20
+  - first:
+      213: -8579981230656273843
+    second: NeutrophileZellkern
+  - first:
+      213: 238836231700493314
+    second: NeutrophilePunkt_15
+  - first:
+      213: -6514055659194341397
+    second: NeutrophilePunkt_17
+  - first:
+      213: -9055608431549980800
+    second: NeutrophilePunkt_3
+  - first:
+      213: 995577202715592886
+    second: NeutrophilePunkt_2
+  - first:
+      213: -4650364643774936784
+    second: NeutrophilePunkt_1
+  - first:
+      213: 3020055750732391537
+    second: NeutrophilePunkt_19
+  - first:
+      213: -8075564503760154747
+    second: NeutrophileZellkernObenLichtreflex1
+  - first:
+      213: 5908164601122507723
+    second: NeutrophileZellkernObenLichtreflex2
+  - first:
+      213: 3256381670756007334
+    second: NeutrophileZellkernUntenLichtreflex1
+  - first:
+      213: -1181427941274533630
+    second: NeutrophileZellkernUntenLichtreflex2
+  - first:
+      213: -3453853827133752077
+    second: NeutrophileSpritesheet_25
+  - first:
+      213: 6911648188819177301
+    second: NeutrophileMainbody
+  - first:
+      213: 4893350367551161330
+    second: NeutrophileMainbodySchwatten1
+  - first:
+      213: 6711410785909641834
+    second: NeutrophileMainbodySchwatten2
+  - first:
+      213: -3682346887355411030
+    second: NeutrophileMainbodySchwatten3
+  - first:
+      213: 5732807318501424853
+    second: NeutrophileMainbodyLichtreflex1
+  - first:
+      213: 6249827010105984464
+    second: NeutrophileMainbodyLichtreflex2
+  - first:
+      213: 2055302733339963796
+    second: NeutrophileMainbodyLichtreflex3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -35,13 +134,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,9 +149,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -75,13 +174,1574 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NeutrophilePunkt_4
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1984
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f3069671b7d97a0800000000000000
+      internalID: -6368798957549633779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_5
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1997
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea758807f50d71d20800000000000000
+      internalID: 3249294764499556270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_7
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1991
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2cc3cb8c6d08f30800000000000000
+      internalID: 4575893379048325872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_8
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1989
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0591f7b884395c4a0800000000000000
+      internalID: -6573686141290079920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_10
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 2008
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0008ffc724ff90110800000000000000
+      internalID: 1227793034465214464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_12
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2002
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cc96705d165ea50800000000000000
+      internalID: 6549748800660556884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_14
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 1992
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ac4a38014dad020800000000000000
+      internalID: 2367437721529797259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_16
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1978
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae14e11000183e040800000000000000
+      internalID: 4675722675159450090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_6
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1951
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e326ef76a9f972030800000000000000
+      internalID: 3469917523430761022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_9
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1951
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ace110ba4d27420800000000000000
+      internalID: 2626395363633711640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_11
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1936
+        width: 54
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981075b7ec6f10a70800000000000000
+      internalID: 8791579314296914313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_13
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1951
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3667e13d9a6b261e0800000000000000
+      internalID: -2206000026950404509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_18
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1949
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887d5350d35400970800000000000000
+      internalID: 8719045006972016520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_20
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1954
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5301df85a4e3b5a0800000000000000
+      internalID: -6506605636886658209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileZellkern
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1222
+        width: 655
+        height: 717
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        position: {x: 136.6224, y: 172.57263, z: 0}
+        rotation: {x: 0, y: 0, z: 0.82806736, w: 0.5606286}
+        length: 132.605
+        parentId: -1
+      - name: bone_2
+        position: {x: 132.60503, y: -0.00002102404, z: 0}
+        rotation: {x: 0, y: 0, z: -0.27583542, w: 0.9612049}
+        length: 101.75345
+        parentId: 0
+      - name: bone_3
+        position: {x: 101.753456, y: 0.000008210195, z: 0}
+        rotation: {x: 0, y: 0, z: -0.13525862, w: 0.99081033}
+        length: 264.3195
+        parentId: 1
+      - name: bone_4
+        position: {x: 157.96335, y: 152.87329, z: 0}
+        rotation: {x: 0, y: 0, z: -0.3006393, w: 0.9537379}
+        length: 100.191986
+        parentId: -1
+      - name: bone_5
+        position: {x: 100.19198, y: 0.000036270452, z: 0}
+        rotation: {x: 0, y: 0, z: 0.26873392, w: 0.96321446}
+        length: 98.71519
+        parentId: 3
+      - name: bone_6
+        position: {x: 98.715164, y: 0.000050720613, z: 0}
+        rotation: {x: 0, y: 0, z: 0.27961493, w: 0.9601123}
+        length: 301.20294
+        parentId: 4
+      spriteID: d42c6378788cde880800000000000000
+      internalID: -8579981230656273843
+      vertices:
+      - {x: 448.969, y: 0.40698242}
+      - {x: 460.813, y: 1.9150391}
+      - {x: 497.023, y: 12.885986}
+      - {x: 531.942, y: 30.200928}
+      - {x: 565.034, y: 50.15796}
+      - {x: 593.23596, y: 74.41199}
+      - {x: 616.02, y: 105.083984}
+      - {x: 632.22, y: 140.47095}
+      - {x: 647, y: 176.09802}
+      - {x: 655, y: 212.56897}
+      - {x: 654.29504, y: 237.70496}
+      - {x: 641.44104, y: 266.55896}
+      - {x: 617.153, y: 288.26196}
+      - {x: 573.963, y: 300}
+      - {x: 535.4, y: 300.719}
+      - {x: 497.347, y: 297.19897}
+      - {x: 460.175, y: 290.12097}
+      - {x: 423.51898, y: 279.12}
+      - {x: 393.63098, y: 255.08398}
+      - {x: 367.993, y: 226.80005}
+      - {x: 342.418, y: 198.23096}
+      - {x: 314.524, y: 171.01807}
+      - {x: 283.162, y: 151.01697}
+      - {x: 249.01898, y: 147.93298}
+      - {x: 214.95001, y: 162.83398}
+      - {x: 185.28198, y: 186.47803}
+      - {x: 157.387, y: 213.974}
+      - {x: 135.462, y: 244.41101}
+      - {x: 123, y: 278.51294}
+      - {x: 147.07202, y: 307.271}
+      - {x: 179.06702, y: 327.62598}
+      - {x: 214.001, y: 342.261}
+      - {x: 249.78699, y: 354.87903}
+      - {x: 283.608, y: 372.83606}
+      - {x: 312.994, y: 397.99304}
+      - {x: 336.254, y: 428.56702}
+      - {x: 352.376, y: 463.037}
+      - {x: 359, y: 500.48303}
+      - {x: 352.25, y: 536.124}
+      - {x: 335.999, y: 573.02295}
+      - {x: 320.156, y: 607.655}
+      - {x: 303, y: 642.06604}
+      - {x: 282.08398, y: 674.396}
+      - {x: 253.10602, y: 699.021}
+      - {x: 218.06, y: 713.97}
+      - {x: 194.85602, y: 716.588}
+      - {x: 146.613, y: 716.61206}
+      - {x: 110.020004, y: 704.34595}
+      - {x: 79.668, y: 682.0029}
+      - {x: 52.962006, y: 654.001}
+      - {x: 31.868988, y: 621.60693}
+      - {x: 15.898987, y: 586.27905}
+      - {x: 4.9559937, y: 550.15}
+      - {x: 0, y: 512.23596}
+      - {x: 0.64801025, y: 472.93506}
+      - {x: 10.7369995, y: 436.484}
+      - {x: 21.692993, y: 401.208}
+      - {x: 32.403015, y: 365.06702}
+      - {x: 42.67099, y: 328.18298}
+      - {x: 51.889008, y: 292.36096}
+      - {x: 60.929993, y: 256.599}
+      - {x: 71.854004, y: 220.50903}
+      - {x: 88.550995, y: 185.35596}
+      - {x: 108.974, y: 153.08105}
+      - {x: 134.60999, y: 124.531006}
+      - {x: 162.91101, y: 97.62207}
+      - {x: 192.90698, y: 73.89404}
+      - {x: 225.44598, y: 62.829956}
+      - {x: 264.828, y: 53.96704}
+      - {x: 301.198, y: 42.688965}
+      - {x: 337.586, y: 28.843994}
+      - {x: 373.486, y: 13.7960205}
+      - {x: 404.56403, y: 0}
+      - {x: 476.8006, y: 143.87463}
+      - {x: 543.81665, y: 199.28076}
+      - {x: 396.07227, y: 108.06323}
+      - {x: 180.66125, y: 572.76013}
+      - {x: 161.56323, y: 461.23572}
+      indices: 3e0000003d0000001b0000004a00000008000000070000004a0000000500000049000000490000004b0000001300000004000000490000000500000003000000020000004900000004000000030000004900000049000000020000004b000000060000004a000000070000004b00000001000000000000004b000000140000001300000016000000150000004b000000140000004b000000150000004400000016000000450000004b0000004500000016000000480000004b000000000000004b00000048000000470000004b00000046000000450000004a000000060000000500000009000000080000004a000000010000004b000000020000000e0000004a0000000f0000004a0000000e0000000d000000100000000f0000004a0000000c0000000b0000004a0000001000000049000000110000001200000049000000130000000b0000000a0000004a0000004900000012000000110000004d000000220000002100000026000000250000004d000000270000004c000000280000004c000000270000002600000029000000280000004c00000025000000240000004d00000024000000230000004d0000004d00000023000000220000004a000000490000001000000047000000460000004b0000000d0000000c0000004a0000004400000017000000160000004d000000340000004c000000400000001800000041000000390000001d0000003a0000001a000000190000003f0000001800000040000000190000001700000042000000180000004200000017000000430000001700000044000000430000001e0000001d0000004d0000004200000041000000180000001d0000001c0000003a0000003b0000001c0000003c0000003d0000003c0000001b0000001c0000001b0000003c0000001c0000003b0000003a0000001a0000003f0000003e0000001a0000003e0000001b00000019000000400000003f00000036000000350000004d000000360000004d000000370000004d00000035000000340000004c0000002c0000002b0000002d0000004c0000002e0000002d0000002c0000004c0000002e0000004c0000002f0000002b0000002a0000004c0000004d0000001d000000390000001f0000004d0000002000000021000000200000004d0000002a000000290000004c0000004d0000004c00000026000000300000002f0000004c0000004d00000039000000380000004c0000003300000032000000310000004c00000032000000300000004c000000310000004c0000003400000033000000370000004d000000380000004d0000001f0000001e0000000a000000090000004a000000
+      edges:
+      - {x: 1, y: 0}
+      - {x: 2, y: 1}
+      - {x: 3, y: 2}
+      - {x: 4, y: 3}
+      - {x: 5, y: 4}
+      - {x: 6, y: 5}
+      - {x: 7, y: 6}
+      - {x: 8, y: 7}
+      - {x: 9, y: 8}
+      - {x: 10, y: 9}
+      - {x: 11, y: 10}
+      - {x: 11, y: 12}
+      - {x: 12, y: 13}
+      - {x: 14, y: 13}
+      - {x: 14, y: 15}
+      - {x: 16, y: 15}
+      - {x: 16, y: 17}
+      - {x: 17, y: 18}
+      - {x: 19, y: 18}
+      - {x: 19, y: 20}
+      - {x: 20, y: 21}
+      - {x: 21, y: 22}
+      - {x: 22, y: 23}
+      - {x: 23, y: 24}
+      - {x: 24, y: 25}
+      - {x: 25, y: 26}
+      - {x: 26, y: 27}
+      - {x: 27, y: 28}
+      - {x: 29, y: 28}
+      - {x: 30, y: 29}
+      - {x: 31, y: 30}
+      - {x: 31, y: 32}
+      - {x: 33, y: 32}
+      - {x: 33, y: 34}
+      - {x: 34, y: 35}
+      - {x: 35, y: 36}
+      - {x: 36, y: 37}
+      - {x: 37, y: 38}
+      - {x: 38, y: 39}
+      - {x: 39, y: 40}
+      - {x: 40, y: 41}
+      - {x: 41, y: 42}
+      - {x: 43, y: 42}
+      - {x: 44, y: 43}
+      - {x: 45, y: 44}
+      - {x: 46, y: 45}
+      - {x: 47, y: 46}
+      - {x: 48, y: 47}
+      - {x: 49, y: 48}
+      - {x: 50, y: 49}
+      - {x: 51, y: 50}
+      - {x: 52, y: 51}
+      - {x: 53, y: 52}
+      - {x: 54, y: 53}
+      - {x: 55, y: 54}
+      - {x: 56, y: 55}
+      - {x: 57, y: 56}
+      - {x: 58, y: 57}
+      - {x: 58, y: 59}
+      - {x: 59, y: 60}
+      - {x: 61, y: 60}
+      - {x: 62, y: 61}
+      - {x: 63, y: 62}
+      - {x: 64, y: 63}
+      - {x: 65, y: 64}
+      - {x: 66, y: 65}
+      - {x: 67, y: 66}
+      - {x: 67, y: 68}
+      - {x: 69, y: 68}
+      - {x: 70, y: 69}
+      - {x: 70, y: 71}
+      - {x: 71, y: 72}
+      - {x: 0, y: 72}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8168918
+        weight[1]: 0.1831082
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 4
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.5019676
+        weight[1]: 0.49803245
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 4
+        boneIndex[1]: 5
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.74152297
+        weight[1]: 0.1379953
+        weight[2]: 0.12048173
+        weight[3]: 0
+        boneIndex[0]: 4
+        boneIndex[1]: 3
+        boneIndex[2]: 5
+        boneIndex[3]: 0
+      - weight[0]: 0.5720021
+        weight[1]: 0.4279979
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 4
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.7250862
+        weight[1]: 0.27491388
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8829764
+        weight[1]: 0.11702363
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 3
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.7472761
+        weight[1]: 0.25272384
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.85060644
+        weight[1]: 0.14939356
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8332051
+        weight[1]: 0.16679496
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 2
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.6309714
+        weight[1]: 0.36902866
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 2
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.5187076
+        weight[1]: 0.4812924
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.62356424
+        weight[1]: 0.37643576
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.7113384
+        weight[1]: 0.28866163
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.7773022
+        weight[1]: 0.22269778
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.83360285
+        weight[1]: 0.16639715
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8764903
+        weight[1]: 0.12350971
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.99999994
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.99999994
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.74942076
+        weight[1]: 0.2505792
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 1
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.5524442
+        weight[1]: 0.44755575
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 2
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.5023142
+        weight[1]: 0.49768576
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 1
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.99999994
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8773223
+        weight[1]: 0.1226777
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.5804111
+        weight[1]: 0.419589
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 3
+        boneIndex[1]: 4
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 4
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 4
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.55778146
+        weight[1]: 0.44221857
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 4
+        boneIndex[1]: 5
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 0.8242339
+        weight[1]: 0.17576611
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 4
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 5
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 2
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: NeutrophilePunkt_15
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 1929
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204300e8944805300800000000000000
+      internalID: 238836231700493314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_17
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1910
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7299214ec6995a0800000000000000
+      internalID: -6514055659194341397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_3
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1895
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f5e643c14045280800000000000000
+      internalID: -9055608431549980800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_2
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1870
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8075ae03001dd00800000000000000
+      internalID: 995577202715592886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_1
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 1888
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03942c3cef5967fb0800000000000000
+      internalID: -4650364643774936784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophilePunkt_19
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1896
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174a74054b469e920800000000000000
+      internalID: 3020055750732391537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileZellkernObenLichtreflex1
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1600
+        width: 260
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f4f98bed4ddef80800000000000000
+      internalID: -8075564503760154747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileZellkernObenLichtreflex2
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1637
+        width: 190
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbc174e6640ef150800000000000000
+      internalID: 5908164601122507723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileZellkernUntenLichtreflex1
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1285
+        width: 252
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad318260edf03d20800000000000000
+      internalID: 3256381670756007334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileZellkernUntenLichtreflex2
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 1325
+        width: 178
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2014c900c89ba9fe0800000000000000
+      internalID: -1181427941274533630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbody
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 33
+        width: 1054
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ff903886b1bef50800000000000000
+      internalID: 6911648188819177301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodySchwatten1
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 553
+        width: 232
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f30a63bb3ca8e340800000000000000
+      internalID: 4893350367551161330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodySchwatten2
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 586
+        width: 238
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a629edb1d88b32d50800000000000000
+      internalID: 6711410785909641834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodySchwatten3
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 558
+        width: 242
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa55a6f040da5ecc0800000000000000
+      internalID: -3682346887355411030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodyLichtreflex1
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 99
+        width: 446
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de7909e1e50f8f40800000000000000
+      internalID: 5732807318501424853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodyLichtreflex2
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 332
+        width: 115
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5420d7d88dbb650800000000000000
+      internalID: 6249827010105984464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeutrophileMainbodyLichtreflex3
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 190
+        width: 54
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4913e9e42f6e58c10800000000000000
+      internalID: 2055302733339963796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 313e58774e37d324a9b0282e0b47d955
     internalID: 0
     vertices: []
     indices: 
