@@ -1,17 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingScreenManager : MonoBehaviour
 {
-
+    public int dotAmount;
     public GameObject loadingScreen;
     public Image slider;
     public Sprite[] loadingSprites;
+    public TextMeshProUGUI loadingScreenText;
+
 
     private AsyncOperation async;
+
+    private void Update()
+    {
+        string text = "Loading ";
+        for(int i = 0; i < dotAmount;i++)
+        {
+            text += ".";
+        }
+        loadingScreenText.text = text;
+    }
 
     public void LoadScreen (int sceneIndex)
     {
