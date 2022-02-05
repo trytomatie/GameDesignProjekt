@@ -9,11 +9,14 @@ public class LoadingScreenManager : MonoBehaviour
 
     public GameObject loadingScreen;
     public Image slider;
+    public Sprite[] loadingSprites;
 
     private AsyncOperation async;
 
     public void LoadScreen (int sceneIndex)
     {
+        slider.fillAmount = 0f;
+        slider.sprite = loadingSprites[Random.Range(0, loadingSprites.Length)];
         StartCoroutine(LoadingScreen(sceneIndex));
     }
 
