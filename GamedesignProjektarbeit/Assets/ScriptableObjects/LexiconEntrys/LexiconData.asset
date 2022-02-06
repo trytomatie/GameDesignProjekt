@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63817740d21a063408a9f900eccf9585, type: 3}
+  m_Name: LexiconData
+  m_EditorClassIdentifier: 
+  fullName: Makrophage
+  fullDesciption: hey
+  prefab: {fileID: 5072542269706452513, guid: bfb32f021ab24f34992c3b0a1e82e1ee, type: 3}
+  sprite: {fileID: 21300000, guid: 4ecfe6fb59575d04b982e48e479ddefc, type: 3}
