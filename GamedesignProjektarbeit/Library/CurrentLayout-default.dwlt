@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 116
+  controlID: 140
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 59
+  controlID: 64
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 60
+  controlID: 65
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 442
     height: 566
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 462
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -347,23 +347,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1014
-      height: 524
-    m_Scale: {x: 0.4851852, y: 0.48518518}
-    m_Translation: {x: 507, y: 262}
+      height: 545
+    m_Scale: {x: 0.5046296, y: 0.5046296}
+    m_Translation: {x: 507, y: 272.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1044.9618
+      x: -1004.69727
       y: -540
-      width: 2089.9236
+      width: 2009.3945
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.48518518
+  m_defaultScale: 0.5046296
   m_LastWindowPixelSize: {x: 1014, y: 545}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -398,9 +398,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 06620000
-      m_LastClickedID: 25094
-      m_ExpandedIDs: aceeffff72f3ffffeaf6ffff2a620000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -578,22 +578,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/UI
+    - Assets/Sprites
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 72
   m_LastFolders:
-  - Assets/Sprites/UI
+  - Assets/Sprites
   m_LastFoldersGridSize: 72
   m_LastProjectPath: D:\Uni\Game_Design_Unity\GameDesignProjekt\GamedesignProjektarbeit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4600000
-    m_LastClickedID: 24804
-    m_ExpandedIDs: 0000000094600000da60000000ca9a3b
+    m_SelectedIDs: ae580000
+    m_LastClickedID: 22702
+    m_ExpandedIDs: 00000000ac580000ae58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,7 +621,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000094600000
+    m_ExpandedIDs: 00000000ac580000ae580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
