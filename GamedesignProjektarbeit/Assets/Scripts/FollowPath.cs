@@ -8,11 +8,15 @@ public class FollowPath : MonoBehaviour
 
     public int currentWaypoint;
 
-    private StatusManager sm;
+    public StatusManager sm;
     // Start is called before the first frame update
     void Start()
     {
-        sm = GetComponent <StatusManager> ();
+        if(sm == null)
+        {
+            sm = GetComponent<StatusManager>();
+        }
+
         if(waypoints.Length == 0)
         {
             GameObject[] gos = GameObject.FindGameObjectsWithTag("Waypoint");

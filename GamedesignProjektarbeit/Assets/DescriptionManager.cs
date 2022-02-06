@@ -49,6 +49,7 @@ public class DescriptionManager : MonoBehaviour
 
     public void LoadDescription()
     {
+        sprite.sprite = currentObject.sprite;
         string descText = "Name: " + currentObject.entityName + "\n" +
             "Level: " + currentObject.level + "\n" +
             "Attackdamage: " + currentObject.damage + "\n" +

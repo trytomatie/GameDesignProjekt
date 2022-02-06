@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
     public TextMeshProUGUI descriptionText;
+    public Image sprite;
 
     public float damageMultiplier = 1.5f;
     public float attackSpeedGain = 0.25f;
@@ -47,6 +49,7 @@ public class UpgradeButton : MonoBehaviour
 
     public void HoverUpgrade()
     {
+
         StatusManager statusmanager = DescriptionManager.instance.currentObject;
         string descText = "Name: " + statusmanager.entityName + "\n" +
     "Level: " + statusmanager.level + "->" + (statusmanager.level + 1) + "\n" +

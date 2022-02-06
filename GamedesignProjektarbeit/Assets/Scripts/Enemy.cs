@@ -76,7 +76,11 @@ public class Enemy : MonoBehaviour
         SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
 
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<FollowPath>().enabled = false;
+        if (GetComponent<FollowPath>() != null)
+        {
+            GetComponent<FollowPath>().enabled = false;
+        }
+ 
         
     }
 }

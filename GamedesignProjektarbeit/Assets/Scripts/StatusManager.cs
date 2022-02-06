@@ -10,7 +10,7 @@ using UnityEngine.Events;
 public class StatusManager : MonoBehaviour
 {
     public enum Faction  {Player,Enemy};
-
+    public Sprite sprite;
     public string entityName = "Unknown";
     public string description = "An unknown cell. Beware!";
     public int dnaCost = 3;
