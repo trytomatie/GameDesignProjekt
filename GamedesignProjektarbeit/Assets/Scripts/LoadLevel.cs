@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
+    public static int loadScene;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,18 @@ public class LoadLevel : MonoBehaviour
     public void LoadScene(int sceneIndex) //
     {
         //
-        PlayerPrefs.SetInt("loadSzene",sceneIndex);
+        loadScene = sceneIndex;
+        SceneManager.LoadScene("Loading Screen");
+    }
+
+
+    /// <summary>
+    /// lade die nächste Scene (in der Build herarchie)
+    /// </summary>
+    public void LoadNextSceene()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;        //hol dir den BuildIndex dieser Szene und addiere eins drauf
+        loadScene += 1;
         SceneManager.LoadScene("Loading Screen");
     }
 

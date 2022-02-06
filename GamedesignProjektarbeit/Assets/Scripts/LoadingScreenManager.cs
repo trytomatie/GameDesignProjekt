@@ -16,6 +16,12 @@ public class LoadingScreenManager : MonoBehaviour
 
     private AsyncOperation async;
 
+
+    private void Start()
+    {
+        LoadScreen(LoadLevel.loadScene);
+    }
+
     private void Update()
     {
         string text = "Loading ";
