@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     private int dna = 100;
     public static GameManager instance;
     public TextMeshProUGUI dnaText;
+    public GameObject pauseScreen;
+    public Image hpBar;
 
 
 
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         UnitButton.PositionTargetedUnit();
         UnitButton.CheckForPlaceUnit();
+        PauseMenu();
     }
 
     public static Vector2 NormalizedDirection(Vector2 origin, Vector2 target)
@@ -54,4 +58,46 @@ public class GameManager : MonoBehaviour
             dna = value;
         }
     }
+
+
+    public void BackToTitle()
+
+    {
+        SceneManager.LoadScene(0);
+
+    }
+
+    public void TryAgain()
+
+    {
+
+        SceneManager.LoadScene(1);
+    }
+
+
+    public void QuitGame()
+    {
+        Application.Quit(0);
+
+    }
+
+
+    public void ExitButton()
+
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void PauseMenu()
+    {
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            pauseScreen.SetActive(true);
+
+        }
+    }
+
+
+
 }

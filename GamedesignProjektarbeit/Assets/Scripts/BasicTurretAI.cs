@@ -6,8 +6,9 @@ public class BasicTurretAI : MonoBehaviour
 {
 
     public Transform target;
-    private StatusManager myStatus;
-    public GameObject projectilePrefab;
+    protected StatusManager myStatus;
+    private GameObject projectilePrefab;
+    public GameObject[] projectilePrefabs;
     public float attackRadius = 4;
     public bool attackOnCooldown = false;
 
@@ -26,7 +27,7 @@ public class BasicTurretAI : MonoBehaviour
         CheckAttack();
     }
 
-    private void CheckAttack()
+    protected void CheckAttack()
     {
         if (target != null && Vector3.Distance(target.transform.position, transform.position) < attackRadius && !attackOnCooldown)
         {
@@ -41,6 +42,7 @@ public class BasicTurretAI : MonoBehaviour
 
     private void ShootProjectile()
     {
+        projectilePrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];
         GameObject go = Instantiate(projectilePrefab, transform.position - new Vector3(0,0,-10), Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();
         projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
@@ -57,7 +59,7 @@ public class BasicTurretAI : MonoBehaviour
 
     
 
-    private bool FindTarget()
+    protected bool FindTarget()
     {
         StatusManager[] targets = GameObject.FindObjectsOfType<StatusManager>(true);
         float distance = 1000;

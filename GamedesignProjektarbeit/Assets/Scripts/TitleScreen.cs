@@ -5,7 +5,6 @@ using UnityEngine;
 public class TitleScreen : MonoBehaviour
 {
     public int movementSpeed = 1;
-    public bool visible;
     public Vector2 direction;
     private Rigidbody2D rb;
 
@@ -26,6 +25,14 @@ public class TitleScreen : MonoBehaviour
     public void MoveEnemy()
     {
         rb.velocity = direction * movementSpeed;
+
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit(0);
+
     }
 
 

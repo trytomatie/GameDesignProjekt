@@ -14,7 +14,7 @@ public class Organ : MonoBehaviour
     private float healthPercantage;
 
     private Animator organAnimator;
-    
+    public GameObject gameOverScreen;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class Organ : MonoBehaviour
     void Update()
     {
         
+        
     }
 
 
@@ -39,11 +40,13 @@ public class Organ : MonoBehaviour
     {
         if (alive)
         {
+
             organAnimator.SetTrigger("getDamage"); // spiele die Animation get Damage ab
             //Ziehe den Schaden vom Aktuellen Leben ab
             currentHealth = currentHealth - damage;
             //berechne den Prozentwert Für die Healthbar
             healthPercantage = currentHealth / startHealth * 100;
+            GameManager.instance.hpBar.fillAmount = healthPercantage;
             CheckAlive();
         }
         
@@ -57,6 +60,8 @@ public class Organ : MonoBehaviour
             alive = false;
             organAnimator.SetBool("isAlive", false);
             //game Over
+            gameOverScreen.SetActive(true);
+            
         }
         else 
         { 

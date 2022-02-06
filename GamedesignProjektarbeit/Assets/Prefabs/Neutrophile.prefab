@@ -775,8 +775,8 @@ MonoBehaviour:
   - {fileID: 5190432564401806315}
   - {fileID: 5190432563696429352}
   m_Bounds:
-    m_Center: {x: 0, y: -0.0019390583, z: 0}
-    m_Extent: {x: 3.275, y: 3.5830612, z: 0}
+    m_Center: {x: 0.00000023841858, y: -0.0019412041, z: 0}
+    m_Extent: {x: 3.275, y: 3.5830588, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5190432563744580030
@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 3683747446050296608}
   - component: {fileID: 6846778244418790248}
   - component: {fileID: 1236511490706346575}
+  - component: {fileID: -3147093010863238581}
   m_Layer: 0
   m_Name: Neutrophile
   m_TagString: Untagged
@@ -900,10 +901,10 @@ MonoBehaviour:
   level: 1
   hp: 10
   maxHp: 10
-  damage: 1
+  damage: 10000
   resistance: 0
-  attackspeed: 1
-  projectileSpeed: 2
+  attackspeed: 1.5
+  projectileSpeed: 50
   size: 0.2
   moveSpeed: 0.5
   isActive: 0
@@ -964,6 +965,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3147093010863238581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190432563752595787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516f4511c22083842ab8873ebe2a11dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  projectilePrefabs:
+  - {fileID: 1382421794850576257, guid: 820aab5804b68a947848e52f8a68acb6, type: 3}
+  attackRadius: 100
+  attackOnCooldown: 0
+  locksOnTarget: 0
 --- !u!1 &5190432563825913824
 GameObject:
   m_ObjectHideFlags: 0

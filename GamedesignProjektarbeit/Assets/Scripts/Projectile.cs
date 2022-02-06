@@ -48,6 +48,11 @@ public class Projectile : MonoBehaviour
             // Moves to last target Position
             rb.velocity = targetDirectionOnAttackDeclaration * projectileSpeed;
         }
+        if (target.GetComponent<StatusManager>().Hp < 0 && lockOn == true)
+        
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void MoveToTarget(Transform target)

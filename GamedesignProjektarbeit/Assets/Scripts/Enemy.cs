@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     private Animator enemyAnimator;
     private Vector2 currentPos;
     private Vector2 lastPos;
-
+    public Collider2D[] collider;
 
     // Start is called before the first frame update
     void Start()
@@ -75,12 +75,18 @@ public class Enemy : MonoBehaviour
 
         SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
 
-        GetComponent<Collider2D>().enabled = false;
+        foreach(Collider2D c in collider)
+        {
+            c.enabled = false;
+            
+        }
+        
+        //GetComponent<Collider2D>().enabled = false;     
         if (GetComponent<FollowPath>() != null)
         {
             GetComponent<FollowPath>().enabled = false;
         }
- 
+             
         
     }
 }

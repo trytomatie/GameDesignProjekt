@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcb328438191cd42ab380cde4ba006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
   entityName: Unknown
   description: An unknown cell. Beware!
   dnaCost: 3
@@ -1356,6 +1357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   currentWaypoint: 0
+  sm: {fileID: 0}
 --- !u!114 &647429138322237777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,6 +1373,9 @@ MonoBehaviour:
   dieAni: {fileID: 7400000, guid: 4bb3949556961314ebb7f6bbafc1c0d5, type: 2}
   attackAni: {fileID: 7400000, guid: 20cc4f60e0e718c45919895cc8e2f5a4, type: 2}
   dealDamage: 10
+  collider:
+  - {fileID: 8768696629388982338}
+  - {fileID: 561553575343095178}
 --- !u!1 &5072542269734515394
 GameObject:
   m_ObjectHideFlags: 0
