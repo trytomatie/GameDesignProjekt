@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    private int dna = 100;
+    private int dna = 10;
     public static GameManager instance;
     public TextMeshProUGUI dnaText;
     public GameObject pauseScreen;

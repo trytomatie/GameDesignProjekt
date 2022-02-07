@@ -46,7 +46,7 @@ public class UnitButton : MonoBehaviour
             RaycastHit2D[] raycastHits =  Physics2D.CircleCastAll(targetedUnit.transform.position, targetedUnit.GetComponent<CircleCollider2D>().radius * targetedUnit.transform.localScale.x, Vector2.zero);
             foreach(RaycastHit2D raycastHit in raycastHits)
             {
-                if(raycastHit.collider.gameObject != targetedUnit)
+                if(raycastHit.collider.gameObject != targetedUnit && raycastHit.collider.gameObject.tag !="Enemy")
                 {
                     canPlace = false;
                 }

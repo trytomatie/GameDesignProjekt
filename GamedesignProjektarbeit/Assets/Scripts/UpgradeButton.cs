@@ -39,7 +39,7 @@ public class UpgradeButton : MonoBehaviour
         {
 
             statusmanager.damage = Mathf.CeilToInt(statusmanager.damage * damageMultiplier);
-            statusmanager.attackspeed = statusmanager.attackspeed += attackSpeedGain;
+            statusmanager.baseAttackspeed = statusmanager.baseAttackspeed += attackSpeedGain;
             statusmanager.dnaCost = upgradeCost;
             GameManager.instance.Dna -= upgradeCost;
             statusmanager.level++;
@@ -54,7 +54,7 @@ public class UpgradeButton : MonoBehaviour
         string descText = "Name: " + statusmanager.entityName + "\n" +
     "Level: " + statusmanager.level + "->" + (statusmanager.level + 1) + "\n" +
     "Attackdamage: " + statusmanager.damage + "->" + statusmanager.damage * damageMultiplier + "\n" +
-    "Attackspeed: " + statusmanager.attackspeed + "->" + (statusmanager.attackspeed + attackSpeedGain).ToString(".00") + "\n" +
+    "Attackspeed: " + statusmanager.Attackspeed + "->" + (statusmanager.Attackspeed + attackSpeedGain).ToString(".00") + "\n" +
     "Upgradecost: " + statusmanager.dnaCost * 2f + "->" + statusmanager.dnaCost * 2 * 2;
         descriptionText.text = descText;
     }

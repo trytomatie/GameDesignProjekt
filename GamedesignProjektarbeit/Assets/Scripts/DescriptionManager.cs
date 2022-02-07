@@ -53,7 +53,7 @@ public class DescriptionManager : MonoBehaviour
         string descText = "Name: " + currentObject.entityName + "\n" +
             "Level: " + currentObject.level + "\n" +
             "Attackdamage: " + currentObject.damage + "\n" +
-            "Attackspeed: " + currentObject.attackspeed + "\n" +
+            "Attackspeed: " + currentObject.Attackspeed + "\n" +
             "Upgradecost: " + currentObject.dnaCost * 2f;
         descriptionText.text = descText;
     }

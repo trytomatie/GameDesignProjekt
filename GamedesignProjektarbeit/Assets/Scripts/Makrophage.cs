@@ -7,8 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Makrophage : MonoBehaviour
 {
-    public int damageDeal;
-    public float coolDown;
+    // public float coolDown;
 
 
     private Animator macrophageAnimator;
@@ -34,7 +33,7 @@ public class Makrophage : MonoBehaviour
 
     private void CheckCoolDown()
     {
-        if (Time.time >= timerSetTime+coolDown) //wenn der Cooldown vorueber kann die Macrophage wieder angreifen
+        if (Time.time >= timerSetTime+ Mathf.Clamp(1 / GetComponent<StatusManager>().Attackspeed, 0.01f, 100f)) //wenn der Cooldown vorueber kann die Macrophage wieder angreifen
         {
             attackAble = true;
         }
@@ -51,11 +50,11 @@ public class Makrophage : MonoBehaviour
 
             if (attackAble==true)       //falls der CooldownAbgelaufen ist und die Zelle wieder Angreifen kann
             {
-                
+                GetComponent<StatusManager>().stamina -= 5;
                 macrophageAnimator.SetTrigger("Attack");
                 var statusManagerScript = other.gameObject.GetComponent<StatusManager>();
 
-                statusManagerScript.ApplyDamage(damageDeal);
+                statusManagerScript.ApplyDamage(GetComponent<StatusManager>().damage);
                 timerSetTime = Time.time;       //die Zeit an dem der Cooldown gestartet ist
                 attackAble = false;             //fuers naechste mal kann nicht mehr angreifen 
                 print(Time.time);

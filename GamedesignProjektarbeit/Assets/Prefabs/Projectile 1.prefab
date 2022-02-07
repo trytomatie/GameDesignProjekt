@@ -141,6 +141,7 @@ MonoBehaviour:
   projectileSpeed: 1
   lockOn: 0
   targetDirectionOnAttackDeclaration: {x: 0, y: 0}
+  stunValue: 1
 --- !u!95 &1506788339
 Animator:
   serializedVersion: 3

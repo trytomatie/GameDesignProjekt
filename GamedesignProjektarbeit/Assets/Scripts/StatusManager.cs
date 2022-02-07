@@ -21,27 +21,64 @@ public class StatusManager : MonoBehaviour
     public int maxHp = 10;
     public int damage = 1;
     public float resistance = 0;
-    public float attackspeed = 1;
+    public float baseAttackspeed;
+    public float attackSpeedMultiplier;
+    private float attackspeed = 1;
     public float projectileSpeed = 2;
     public float size = 0.2f;
     public float moveSpeed = 0.5f;
+    public int stamina = 50;
+    [HideInInspector]
+    public int maxStamina = 100;
+
+    public int stunValue = 0;
 
     public bool isActive = false;
 
     public UnityEvent deathEvent;
     public UnityEvent damageEvent;
 
+    private bool dead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-      
+        // regens 1 Stamina every 3 seconds
+        InvokeRepeating("StaminaRegen", 0, 3f); 
+    }
+
+    private void StaminaRegen()
+    {
+        if(stamina < maxStamina)
+        {
+            stamina++;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(stamina > 10)
+        {
+            attackSpeedMultiplier = 1;
+        }
+        else
+        {
+            attackSpeedMultiplier = 0.5f;
+        }
+
+        if(stunValue > 3)
+        {
+            StartCoroutine(SetMoveSpeed(moveSpeed, 3f));
+            moveSpeed = 0;
+            stunValue = 0;
+        }
+    }
+
+    IEnumerator SetMoveSpeed(float amount, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        moveSpeed = amount;
     }
 
     private void BaseDeathEvent()
@@ -64,8 +101,9 @@ public class StatusManager : MonoBehaviour
         {
             if(value <= 0)
             {
-                if(deathEvent != null)
+                if(deathEvent != null && !dead)
                 {
+                    dead = true;
                     deathEvent.Invoke();
                     GameManager.instance.Dna += dnaCost;
                 }
@@ -81,4 +119,10 @@ public class StatusManager : MonoBehaviour
         }
     }
 
+    public float Attackspeed { 
+        get 
+        {
+            return baseAttackspeed * attackSpeedMultiplier;
+        }
+    }
 }

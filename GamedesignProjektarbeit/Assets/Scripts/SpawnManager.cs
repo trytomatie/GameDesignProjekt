@@ -27,9 +27,10 @@ public class SpawnManager : MonoBehaviour
     public float currentTime;
     public float timerDelay;
 
+    public GameObject wonDialog;
+
     private int spawnedEnemies;
-    private int currentWave = 1;
-    private int maxWave = 2;
+    private int currentWave = 0;
     private bool hasRoundEnded = false;
 
 
@@ -39,7 +40,6 @@ public class SpawnManager : MonoBehaviour
     {
         if (instance == null)
         {
-            StartNewWave();
 
             instance = this;
         }
@@ -63,7 +63,8 @@ public class SpawnManager : MonoBehaviour
     /// </summary>
     private void SpawnBacteria ()
     {
-            Instantiate(bacteriaPrefab, spawnPoint.position, bacteriaPrefab.transform.rotation);
+        GameObject go = Instantiate(bacteriaPrefab, spawnPoint.position, bacteriaPrefab.transform.rotation);
+        go.GetComponent<StatusManager>().level = currentWave;
     }
 
     /// <summary>
@@ -71,7 +72,8 @@ public class SpawnManager : MonoBehaviour
     /// </summary>
     private void SpawnVirus ()
     {
-        Instantiate(virusPrefab, spawnPoint.position, virusPrefab.transform.rotation);
+        GameObject go = Instantiate(virusPrefab, spawnPoint.position, virusPrefab.transform.rotation);
+        go.transform.GetChild(0).GetComponent<StatusManager>().level = currentWave;
     }
 
 
@@ -106,8 +108,12 @@ public class SpawnManager : MonoBehaviour
         if (hasRoundEnded == false)
         {
             hasRoundEnded = true;
-
-            Invoke("StartNewWave", 30f);
+            if(currentWave == waves.Length)
+            {
+                wonDialog.SetActive(true);
+                return;
+            }
+            Invoke("StartNewWave", startTime);
             currentTime = startTime;
             InvokeRepeating("StartTimer", 0, 1);
             currentWave = currentWave + 1;

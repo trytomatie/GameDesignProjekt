@@ -9,20 +9,26 @@ public class Enemy : MonoBehaviour
 
     public AnimationClip dieAni;
     public AnimationClip attackAni;
-    public float dealDamage=10;
 
 
     private Animator enemyAnimator;
     private Vector2 currentPos;
     private Vector2 lastPos;
-    public Collider2D[] collider;
+    public Collider2D[] colliders;
+
+    private StatusManager myStatus;
 
     // Start is called before the first frame update
     void Start()
     {
+        myStatus = GetComponent<StatusManager>();
         enemyAnimator = GetComponent<Animator>();       //get Animator Component (Markus)
         currentPos = new Vector2(transform.position.x, transform.position.y);   //set both Positions so there are not null (Markus)
-        lastPos = new Vector2(transform.position.x, transform.position.y);      
+        lastPos = new Vector2(transform.position.x, transform.position.y);
+        myStatus.maxHp *= myStatus.level;
+        myStatus.Hp = myStatus.maxHp;
+        myStatus.dnaCost *= myStatus.level;
+
     }
 
     // Update is called once per frame
@@ -52,7 +58,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject, attackAni.length);                                      //Nach der Animation wird der Gegner getoetet (Markus)
 
             var organScript = other.gameObject.GetComponent<Organ>();                   //bekomme das Scriptes des Organs und erteile Schaden (Markus)
-            organScript.OrganTakeDamage(dealDamage);
+            organScript.OrganTakeDamage(myStatus.damage);
 
 
 
@@ -75,7 +81,7 @@ public class Enemy : MonoBehaviour
 
         SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
 
-        foreach(Collider2D c in collider)
+        foreach(Collider2D c in colliders)
         {
             c.enabled = false;
             

@@ -42,12 +42,13 @@ public class BasicTurretAI : MonoBehaviour
 
     private void ShootProjectile()
     {
+        myStatus.stamina-= 2;
         projectilePrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];
         GameObject go = Instantiate(projectilePrefab, transform.position - new Vector3(0,0,-10), Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();
         projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
         attackOnCooldown = true;
-        float attackCooldown =  Mathf.Clamp(1 / myStatus.attackspeed,0.01f,100f);
+        float attackCooldown =  Mathf.Clamp(1 / myStatus.Attackspeed,0.01f,100f);
         Invoke("AttackCooldown", attackCooldown);
         
     }

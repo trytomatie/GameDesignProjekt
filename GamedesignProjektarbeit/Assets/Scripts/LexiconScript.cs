@@ -19,7 +19,7 @@ public class LexiconScript : MonoBehaviour
         stats.text = "Name: " + statusmanager.entityName + "\n" +
     "Level: " + statusmanager.level + "->" + (statusmanager.level + 1) + "\n" +
     "Attackdamage: " + statusmanager.damage + "->" + statusmanager.damage + "\n" +
-    "Attackspeed: " + statusmanager.attackspeed + "->" + (statusmanager.attackspeed).ToString(".00") + "\n" +
+    "Attackspeed: " + statusmanager.Attackspeed + "->" + (statusmanager.Attackspeed).ToString(".00") + "\n" +
     "Cost: " + statusmanager.dnaCost;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3263,8 +3263,8 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: d7d7a381b28757a49b690e964c203a91, type: 2}
   - {fileID: 11400000, guid: 9a732b62c619b3048b3697561c9f6910, type: 2}
-  - {fileID: 11400000, guid: 9a732b62c619b3048b3697561c9f6910, type: 2}
-  - {fileID: 11400000, guid: 9a732b62c619b3048b3697561c9f6910, type: 2}
+  - {fileID: 11400000, guid: cdec64805ae6396418d53b8a36aa3443, type: 2}
+  - {fileID: 11400000, guid: 71f05b6da84582742b6c34ac6724e46c, type: 2}
   currentWaveData: {fileID: 0}
   spawnDelay: 5
   roundCount: {fileID: 1540903731}
@@ -3272,6 +3272,7 @@ MonoBehaviour:
   startTime: 30
   currentTime: 0
   timerDelay: 0
+  wonDialog: {fileID: 667343455}
 --- !u!4 &486023059
 Transform:
   m_ObjectHideFlags: 0
@@ -4494,6 +4495,7 @@ GameObject:
   - component: {fileID: 644728144}
   - component: {fileID: 644728143}
   - component: {fileID: 644728142}
+  - component: {fileID: 644728145}
   m_Layer: 5
   m_Name: EinheitenPanel
   m_TagString: Untagged
@@ -4567,7 +4569,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 644728145}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Trigger
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &644728143
 MonoBehaviour:
@@ -4607,6 +4621,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644728140}
   m_CullTransparentMesh: 1
+--- !u!95 &644728145
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644728140}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a63923aef792fb440aedd5dc5dfe7a0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &645382260
 GameObject:
   m_ObjectHideFlags: 0

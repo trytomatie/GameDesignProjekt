@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class Projectile : MonoBehaviour
     public float projectileSpeed = 1;
     public bool lockOn = false;
     public Vector2 targetDirectionOnAttackDeclaration;
+    public int stunValue = 0;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -48,7 +50,7 @@ public class Projectile : MonoBehaviour
             // Moves to last target Position
             rb.velocity = targetDirectionOnAttackDeclaration * projectileSpeed;
         }
-        if (target.GetComponent<StatusManager>().Hp < 0 && lockOn == true)
+        if (target != null && target.GetComponent<StatusManager>().Hp < 0 && lockOn == true)  
         
         {
             Destroy(gameObject);
@@ -76,15 +78,23 @@ public class Projectile : MonoBehaviour
         other.ApplyDamage(damage);
     }
 
+    private void ApplyStun(StatusManager other)
+    {
+        other.stunValue += stunValue;
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         StatusManager otherStatus = collision.gameObject.GetComponent<StatusManager>();
         if (otherStatus != null && otherStatus.faction != origin.faction)
         {
             ApplyDamage(otherStatus);
+            ApplyStun(otherStatus);
             Destroy(gameObject);
         }
     }
+
+
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
@@ -92,6 +102,7 @@ public class Projectile : MonoBehaviour
         if (otherStatus != null && otherStatus.faction != origin.faction)
         {
             ApplyDamage(otherStatus);
+            ApplyStun(otherStatus);
             Destroy(gameObject);
         }
     }
