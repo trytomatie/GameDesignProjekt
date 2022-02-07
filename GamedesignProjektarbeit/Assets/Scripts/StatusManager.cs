@@ -13,7 +13,7 @@ public class StatusManager : MonoBehaviour
     public Sprite sprite;
     public string entityName = "Unknown";
     public string description = "An unknown cell. Beware!";
-    public int dnaCost = 3;
+    public int dnaCost = 5;
 
     public Faction faction;
     public int level = 1;
@@ -30,7 +30,7 @@ public class StatusManager : MonoBehaviour
     public float baseMoveSpeed = 15;
     public float moveSpeedMod = 1;
     public float moveSpeedPenalty = 0;
-    public int stamina = 50;
+    private int stamina = 50;
     [HideInInspector]
     public int maxStamina = 100;
 
@@ -52,16 +52,16 @@ public class StatusManager : MonoBehaviour
 
     private void StaminaRegen()
     {
-        if(stamina < maxStamina)
+        if(Stamina < maxStamina)
         {
-            stamina++;
+            Stamina+=2;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(stamina > 10)
+        if(Stamina > 10)
         {
             attackSpeedMultiplier = 1;
         }
@@ -84,7 +84,7 @@ public class StatusManager : MonoBehaviour
         moveSpeedMod = amount;
     }
 
-    private void BaseDeathEvent()
+    public void BaseDeathEvent()
     {
         Destroy(gameObject);
     }
@@ -95,6 +95,7 @@ public class StatusManager : MonoBehaviour
        
         damageEvent.Invoke();
         Hp -= Mathf.RoundToInt(damage * (1 - resistance));
+        
     }
 
     public int Hp
@@ -102,23 +103,16 @@ public class StatusManager : MonoBehaviour
         get => hp;
         set
         {
-            if(value <= 0)
+            hp = value;
+            if (hp <= 0)
             {
                 if(deathEvent != null && !dead)
                 {
                     dead = true;
-                    deathEvent.Invoke();
-                    GameManager.instance.Dna += dnaCost;
-                }
-                else
-                {
-                    BaseDeathEvent();
-                    GameManager.instance.Dna += dnaCost;
-                }
-                
+                    deathEvent.Invoke();  
+                }               
             }
-            
-            hp = value;
+
         }
     }
 
@@ -134,6 +128,12 @@ public class StatusManager : MonoBehaviour
         get
         {
             return (baseMoveSpeed - moveSpeedPenalty) * moveSpeedMod;
+        }
+    }
+
+    public int Stamina { get => stamina; set
+        {
+            stamina = Mathf.Clamp(value, 0, maxStamina);
         }
     }
 }

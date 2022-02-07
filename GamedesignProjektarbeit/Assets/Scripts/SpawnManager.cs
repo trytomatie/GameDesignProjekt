@@ -23,7 +23,7 @@ public class SpawnManager : MonoBehaviour
 
     public TextMeshProUGUI roundCount;
     public TextMeshProUGUI timer;
-    public float startTime = 30f;
+    public float startTime = 15f;
     public float currentTime;
     public float timerDelay;
 

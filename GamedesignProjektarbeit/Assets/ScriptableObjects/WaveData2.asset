@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b354d02c83b8f174995b18b523f920cb, type: 3}
   m_Name: WaveData2
   m_EditorClassIdentifier: 
-  bacteriaCount: 4
-  virusCount: 1
+  bacteriaCount: 5
+  virusCount: 5
   spawnDelay: 2

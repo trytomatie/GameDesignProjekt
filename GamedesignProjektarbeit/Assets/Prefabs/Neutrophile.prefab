@@ -825,6 +825,7 @@ GameObject:
   - component: {fileID: 1236511490706346575}
   - component: {fileID: -3147093010863238581}
   - component: {fileID: -8880977556547106685}
+  - component: {fileID: 5275091406208261244}
   m_Layer: 0
   m_Name: Neutrophile
   m_TagString: Player
@@ -878,7 +879,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -896,10 +897,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcb328438191cd42ab380cde4ba006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 866b72ab73371c64b858b0f274047e03, type: 3}
   entityName: Neutrophile
   description: Ehhhh, how did i get here?
-  dnaCost: 15
+  dnaCost: 5
   faction: 0
   level: 1
   hp: 10
@@ -913,13 +914,24 @@ MonoBehaviour:
   baseMoveSpeed: 15
   moveSpeedMod: 1
   moveSpeedPenalty: 0
-  stamina: 50
   maxStamina: 100
   stunValue: 0
   isActive: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6846778244418790248}
+        m_TargetAssemblyTypeName: StatusManager, Assembly-CSharp
+        m_MethodName: BaseDeathEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damageEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1091,6 +1103,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5275091406208261244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190432563752595787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12951b19ea46c040839fca67919f1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 866b72ab73371c64b858b0f274047e03, type: 3}
 --- !u!1 &5190432563825913824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba93be85a53dc141b351ac2b37f1b90, type: 3}
+--- !u!224 &3305570068982164938 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8597025686591311570, guid: fba93be85a53dc141b351ac2b37f1b90, type: 3}
+  m_PrefabInstance: {fileID: 6526132741731738392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8474954759554780384 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3390204832570912760, guid: fba93be85a53dc141b351ac2b37f1b90, type: 3}
@@ -3318,11 +3348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &3305570068982164938 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8597025686591311570, guid: fba93be85a53dc141b351ac2b37f1b90, type: 3}
-  m_PrefabInstance: {fileID: 6526132741731738392}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6730035429160308333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3388,13 +3413,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c5b5f89e335c7947be90d453d78501c, type: 3}
---- !u!4 &6475027058782631277 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 341720916983757568, guid: 9c5b5f89e335c7947be90d453d78501c, type: 3}
-  m_PrefabInstance: {fileID: 6730035429160308333}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7620310944912663676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3793486635034651153, guid: 9c5b5f89e335c7947be90d453d78501c, type: 3}
+  m_PrefabInstance: {fileID: 6730035429160308333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6475027058782631277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 341720916983757568, guid: 9c5b5f89e335c7947be90d453d78501c, type: 3}
   m_PrefabInstance: {fileID: 6730035429160308333}
   m_PrefabAsset: {fileID: 0}

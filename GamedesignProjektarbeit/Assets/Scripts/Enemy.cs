@@ -79,7 +79,9 @@ public class Enemy : MonoBehaviour
     {
         enemyAnimator.SetBool("isAlive",false);         //play Death Animation (Markus)
         Destroy(gameObject, dieAni.length);             //ergaenzung der eines Sterbezeitraums damit die sterbeanimation ausgefuehrt werden kann (Markus)
-        Instantiate(dnaPrefab, transform.position, dnaPrefab.transform.rotation); // Erzeugt ein DNA-Prefab bei Tod eines Gegners (Shaina)
+        GameObject dna = Instantiate(dnaPrefab, transform.position, dnaPrefab.transform.rotation); // Erzeugt ein DNA-Prefab bei Tod eines Gegners (Shaina)
+        Destroy(dna, 10f);
+        GameManager.instance.Dna += myStatus.dnaCost;
         SpawnManager.instance.enemyCount = SpawnManager.instance.enemyCount - 1;
 
         foreach(Collider2D c in colliders)

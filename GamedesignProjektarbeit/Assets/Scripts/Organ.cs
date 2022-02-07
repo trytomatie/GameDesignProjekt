@@ -20,6 +20,9 @@ public class Organ : MonoBehaviour
     public AudioClip organDamage;
     public AudioSource organAudioSource;
 
+    public AudioClip gameOver;
+    public AudioSource gameOverAudioSource;
+
     public float CurrentHealth { get => currentHealth; 
         set
         {
@@ -39,6 +42,7 @@ public class Organ : MonoBehaviour
         organAnimator.SetBool("isAlive", true);
 
         organAudioSource = GetComponent<AudioSource>();
+        gameOverAudioSource = GetComponent<AudioSource>();
 
         //setze das Aktuelle Leben auf den Startwert des Lebens
         currentHealth = startHealth;
@@ -83,6 +87,7 @@ public class Organ : MonoBehaviour
             organAnimator.SetBool("isAlive", false);
             //game Over
             gameOverScreen.SetActive(true);
+            gameOverAudioSource.PlayOneShot(gameOver, 0.2f);
             Time.timeScale = 0;
             
         }

@@ -53,7 +53,7 @@ public class Makrophage : BasicTurretAI
 
             if (attackAble==true)       //falls der CooldownAbgelaufen ist und die Zelle wieder Angreifen kann
             {
-                GetComponent<StatusManager>().stamina -= 5;
+                GetComponent<StatusManager>().Stamina -= 5;
                 macrophageAnimator.SetTrigger("Attack");
                 makrophageAudioSource.PlayOneShot(attackSound, 0.5f);
                 var statusManagerScript = other.gameObject.GetComponent<StatusManager>();

@@ -55,7 +55,7 @@ public class BasicTurretAI : MonoBehaviour
 
     private void ShootProjectile()
     {
-        myStatus.stamina-= 2;
+        myStatus.Stamina-= 2;
         projectilePrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];
         GameObject go = Instantiate(projectilePrefab, transform.position - new Vector3(0,0,-10), Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();

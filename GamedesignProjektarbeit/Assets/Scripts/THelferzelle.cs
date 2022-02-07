@@ -37,9 +37,9 @@ public class THelferzelle : MonoBehaviour
             if(Vector2.Distance(go.transform.position,transform.position) < radius)
             {
                 StatusManager otherStatus = go.GetComponent<StatusManager>();
-                if(otherStatus.stamina < otherStatus.maxStamina)
+                if(otherStatus.Stamina < otherStatus.maxStamina)
                 {
-                    go.GetComponent<StatusManager>().stamina += myStatus.damage;
+                    go.GetComponent<StatusManager>().Stamina += myStatus.damage;
                 }
 
             }
