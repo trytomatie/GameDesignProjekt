@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BasicTurretAI : MonoBehaviour
@@ -18,6 +19,8 @@ public class BasicTurretAI : MonoBehaviour
     public AudioClip attackSound;
     protected AudioSource makrophageAudioSource;
     protected AudioSource turretAudioSource;
+
+    public TextMeshPro upgradeText;
     
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,8 @@ public class BasicTurretAI : MonoBehaviour
     {
         FindTarget();
         CheckAttack();
+
+        upgradeText.text = myStatus.level.ToString();
     }
 
     protected void CheckAttack()

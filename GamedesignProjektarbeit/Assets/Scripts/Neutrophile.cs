@@ -19,7 +19,7 @@ public class Neutrophile : BasicTurretAI
     {
         FindTarget();
         CheckAttack();
-
+        upgradeText.text = myStatus.level.ToString();
 
 
     }

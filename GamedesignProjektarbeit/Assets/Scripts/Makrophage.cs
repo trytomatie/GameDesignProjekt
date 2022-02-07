@@ -17,6 +17,7 @@ public class Makrophage : BasicTurretAI
     // Start is called before the first frame update
     void Start()
     {
+        myStatus = GetComponent<StatusManager>();
         macrophageAnimator = GetComponent<Animator>();
         makrophageAudioSource = GetComponent<AudioSource>();
         attackAble = true;
@@ -29,12 +30,13 @@ public class Makrophage : BasicTurretAI
         {
             CheckCoolDown();
         }
-        
+
+        upgradeText.text = myStatus.level.ToString();
     }
 
     private void CheckCoolDown()
     {
-        if (Time.time >= timerSetTime+ Mathf.Clamp(1 / GetComponent<StatusManager>().Attackspeed, 0.01f, 100f)) //wenn der Cooldown vorueber kann die Macrophage wieder angreifen
+        if (Time.time >= timerSetTime+ Mathf.Clamp(1 / myStatus.Attackspeed, 0.01f, 100f)) //wenn der Cooldown vorueber kann die Macrophage wieder angreifen
         {
             attackAble = true;
         }
@@ -56,7 +58,7 @@ public class Makrophage : BasicTurretAI
                 makrophageAudioSource.PlayOneShot(attackSound, 0.5f);
                 var statusManagerScript = other.gameObject.GetComponent<StatusManager>();
 
-                statusManagerScript.ApplyDamage(GetComponent<StatusManager>().damage);
+                statusManagerScript.ApplyDamage(myStatus.damage);
                 timerSetTime = Time.time;       //die Zeit an dem der Cooldown gestartet ist
                 attackAble = false;             //fuers naechste mal kann nicht mehr angreifen 
                 print(Time.time);

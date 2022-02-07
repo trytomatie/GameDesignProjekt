@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class THelferzelle : MonoBehaviour
@@ -10,6 +11,8 @@ public class THelferzelle : MonoBehaviour
 
     public AudioClip buffSound;
     public AudioSource helperCellAudioSource;
+
+    public TextMeshPro upgradeText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,11 @@ public class THelferzelle : MonoBehaviour
 
         helperCellAudioSource = GetComponent<AudioSource>();
         helperCellAudioSource.PlayOneShot(buffSound, 0.1f);
+    }
+
+    private void Update()
+    {
+        upgradeText.text = myStatus.level.ToString();
     }
 
     private void GiveStamina()
