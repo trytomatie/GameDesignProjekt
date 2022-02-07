@@ -22,6 +22,10 @@ public class SpawnManager : MonoBehaviour
     public static SpawnManager instance;
 
     public TextMeshProUGUI roundCount;
+    public TextMeshProUGUI timer;
+    public float startTime = 30f;
+    public float currentTime;
+    public float timerDelay;
 
     private int spawnedEnemies;
     private int currentWave = 1;
@@ -104,9 +108,9 @@ public class SpawnManager : MonoBehaviour
             hasRoundEnded = true;
 
             Invoke("StartNewWave", 30f);
+            currentTime = startTime;
+            InvokeRepeating("StartTimer", 0, 1);
             currentWave = currentWave + 1;
-
-            print("Ende");
         }
     }
 
@@ -135,5 +139,16 @@ public class SpawnManager : MonoBehaviour
 
         InvokeRepeating("SpawnEnemy", 0f, spawnDelay);
         hasRoundEnded = false;
+        
+    }
+
+    public void StartTimer()
+    {
+        currentTime = currentTime - 1;
+        timer.text = "Round starts in: " + currentTime;
+        if(currentTime <= 0)
+        {
+            CancelInvoke("StartTimer");
+        }
     }
 }

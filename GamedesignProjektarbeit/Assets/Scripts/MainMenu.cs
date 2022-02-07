@@ -17,17 +17,23 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Exits Game
+    /// by Dilara
+    /// </summary>
     public void QuitGame()
     {
         Application.Quit(0);
-
     }
 
+    /// <summary>
+    /// Opens Cutscene
+    /// by Dilara
+    /// </summary>
     public void NewGame()
 
     {
-        SceneManager.LoadScene(3);
-
+        SceneManager.LoadScene(1);
 
     }
 
