@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
+
         if(instance == null)
         {
             SetDNAText(dna);
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
     public void BackToTitle()
 
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
 
     }
@@ -73,7 +76,7 @@ public class GameManager : MonoBehaviour
     public void TryAgain()
 
     {
-
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
@@ -88,6 +91,7 @@ public class GameManager : MonoBehaviour
     public void ExitButton()
 
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(3);
     }
 
@@ -97,8 +101,15 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+
 
         }
+    }
+
+    public void SetTimeScale(float n)
+    {
+        Time.timeScale = n;
     }
 
 }

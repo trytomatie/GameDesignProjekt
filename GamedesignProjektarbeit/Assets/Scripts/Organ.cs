@@ -17,6 +17,9 @@ public class Organ : MonoBehaviour
     public GameObject gameOverScreen;
     public CameraShake cameraShake;
 
+    public AudioClip organDamage;
+    public AudioSource organAudioSource;
+
     public float CurrentHealth { get => currentHealth; 
         set
         {
@@ -34,6 +37,8 @@ public class Organ : MonoBehaviour
         //Hole die Componente Animator die auf dem Organ Liegt setz die AnimationsVariable is alive auf true (Organ lebt)
         organAnimator = GetComponent<Animator>();
         organAnimator.SetBool("isAlive", true);
+
+        organAudioSource = GetComponent<AudioSource>();
 
         //setze das Aktuelle Leben auf den Startwert des Lebens
         currentHealth = startHealth;
@@ -60,6 +65,7 @@ public class Organ : MonoBehaviour
 
             //Shakes Camera when damage is taken
             StartCoroutine(cameraShake.Shake(0.2f, 0.5f));
+            organAudioSource.PlayOneShot(organDamage, 0.1f);
 
             
 
@@ -77,6 +83,7 @@ public class Organ : MonoBehaviour
             organAnimator.SetBool("isAlive", false);
             //game Over
             gameOverScreen.SetActive(true);
+            Time.timeScale = 0;
             
         }
         else 
@@ -88,6 +95,12 @@ public class Organ : MonoBehaviour
     }
 
 
+    public float healthPercentage()
+    {
 
+        healthPercantage = currentHealth / (float)startHealth * 100;
+
+        return healthPercantage;
+    }
 
 }

@@ -598,8 +598,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In diesem Spiel wirst du die Arbeit des menschlichen Immunsystems \xFCbernehmen
-    und Timmy vor den Angriffen der Bakterien und Viren sch\xFCtzen."
+  m_text: In this game you will take over the duty and play as the human immune system
+    to protect Timmy from all kinds of different bacteria and viruses!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 48.69165, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1266,8 +1266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Jeden Tag ist der menschliche K\xF6rper Millionen von Mikroorganismen
-    ausgesetzt."
+  m_text: Every day the human body is subjected to billions of microorganisms.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -2341,7 +2340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Das Immunsystem besch\xFCtzt dich vor diesen Bakterien und Viren."
+  m_text: The one protecting you from them is your immune system.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}

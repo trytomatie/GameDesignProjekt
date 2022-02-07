@@ -26,8 +26,7 @@ public class Neutrophile : BasicTurretAI
     
    void KillCell()
     {
-        myStatus.Hp = 0;
-
+        myStatus.ApplyDamage(10000);
     }
     
 }

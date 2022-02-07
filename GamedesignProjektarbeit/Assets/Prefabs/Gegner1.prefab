@@ -1313,7 +1313,9 @@ MonoBehaviour:
   attackSpeedMultiplier: 0
   projectileSpeed: 2
   size: 0.2
-  moveSpeed: 15
+  baseMoveSpeed: 15
+  moveSpeedMod: 1
+  moveSpeedPenalty: 0
   stamina: 50
   maxStamina: 100
   stunValue: 0
@@ -1380,6 +1382,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 561553575343095178}
   - {fileID: 8768696629388982338}
+  dnaPrefab: {fileID: 6792461828197641321, guid: 9e6e900d19c76454295039b7d30c6576, type: 3}
 --- !u!1 &5072542269734515394
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,9 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject wonDialog;
 
+    public AudioClip winSound;
+    public AudioSource winDialogAudioSource;
+
     private int spawnedEnemies;
     private int currentWave = 0;
     private bool hasRoundEnded = false;
@@ -38,6 +41,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        winDialogAudioSource = GetComponent<AudioSource>();
+
         if (instance == null)
         {
 
@@ -55,7 +60,7 @@ public class SpawnManager : MonoBehaviour
     {
         CheckWaveEnd();
 
-        roundCount.text = "Runde " + currentWave + "/" + waves.Length;
+        roundCount.text = "Round " + currentWave + "/" + waves.Length;
     }
 
     /// <summary>
@@ -111,6 +116,8 @@ public class SpawnManager : MonoBehaviour
             if(currentWave == waves.Length)
             {
                 wonDialog.SetActive(true);
+                winDialogAudioSource.PlayOneShot(winSound, 0.2f);
+                Time.timeScale = 0;
                 return;
             }
             Invoke("StartNewWave", startTime);

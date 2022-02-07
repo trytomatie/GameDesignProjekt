@@ -71,6 +71,10 @@ PrefabInstance:
       value: Gegner2
       objectReference: {fileID: 0}
     - target: {fileID: 197754304232309278, guid: 35be5a10b7d79d9448a087334ccf700e, type: 3}
+      propertyPath: dnaPrefab
+      value: 
+      objectReference: {fileID: 6792461828197641321, guid: 9e6e900d19c76454295039b7d30c6576, type: 3}
+    - target: {fileID: 197754304232309278, guid: 35be5a10b7d79d9448a087334ccf700e, type: 3}
       propertyPath: collider.Array.size
       value: 2
       objectReference: {fileID: 0}
