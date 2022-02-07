@@ -9,6 +9,9 @@ public class Neutrophile : BasicTurretAI
     private void Start()
     {
         myStatus = GetComponent<StatusManager>();
+
+        turretAudioSource = GetComponent<AudioSource>();
+
         Invoke("KillCell", 30);
     }
     // Update is called once per frame

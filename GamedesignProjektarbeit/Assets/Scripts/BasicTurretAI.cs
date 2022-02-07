@@ -13,11 +13,19 @@ public class BasicTurretAI : MonoBehaviour
     public bool attackOnCooldown = false;
 
     public bool locksOnTarget = false;
+
+    public AudioClip shootSound;
+    public AudioClip attackSound;
+    protected AudioSource makrophageAudioSource;
+    protected AudioSource turretAudioSource;
     
     // Start is called before the first frame update
     void Start()
     {
         myStatus = GetComponent<StatusManager>();
+
+        turretAudioSource = GetComponent<AudioSource>();
+        makrophageAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +58,8 @@ public class BasicTurretAI : MonoBehaviour
         attackOnCooldown = true;
         float attackCooldown =  Mathf.Clamp(1 / myStatus.Attackspeed,0.01f,100f);
         Invoke("AttackCooldown", attackCooldown);
+
+        turretAudioSource.PlayOneShot(shootSound, 0.1f);
         
     }
 

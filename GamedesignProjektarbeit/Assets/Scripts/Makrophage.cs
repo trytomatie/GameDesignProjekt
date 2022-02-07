@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// By Markus Schwalb
 /// </summary>
-public class Makrophage : MonoBehaviour
+public class Makrophage : BasicTurretAI
 {
     // public float coolDown;
 
@@ -18,6 +18,7 @@ public class Makrophage : MonoBehaviour
     void Start()
     {
         macrophageAnimator = GetComponent<Animator>();
+        makrophageAudioSource = GetComponent<AudioSource>();
         attackAble = true;
     }
 
@@ -52,6 +53,7 @@ public class Makrophage : MonoBehaviour
             {
                 GetComponent<StatusManager>().stamina -= 5;
                 macrophageAnimator.SetTrigger("Attack");
+                makrophageAudioSource.PlayOneShot(attackSound, 0.5f);
                 var statusManagerScript = other.gameObject.GetComponent<StatusManager>();
 
                 statusManagerScript.ApplyDamage(GetComponent<StatusManager>().damage);

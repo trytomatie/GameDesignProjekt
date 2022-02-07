@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,8 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public Image hpBar;
 
-
-
+    public UnityEvent unitAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +23,14 @@ public class GameManager : MonoBehaviour
         {
             SetDNAText(dna);
             instance = this;
+
+            UnitButton.unitAudio = unitAudio;
         }
         else
         {
             Destroy(this);
         }
+
     }
 
     // Update is called once per frame
@@ -97,7 +100,5 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
-
 
 }

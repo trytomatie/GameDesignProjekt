@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Handles unit Placement and Purchases 
@@ -13,6 +14,8 @@ public class UnitButton : MonoBehaviour
     public static bool holdingUnit;
     public static GameObject targetedUnit;
     public static bool placeDelay;
+
+    public static UnityEvent unitAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +91,8 @@ public class UnitButton : MonoBehaviour
             targetedUnit.GetComponent<SpriteRenderer>().color = Color.white;
             targetedUnit = null;
             holdingUnit = false;
+
+            unitAudio.Invoke();
         }
         else
         {
