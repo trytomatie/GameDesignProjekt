@@ -438,18 +438,20 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 708837d2ad7472d4eb4973a65b4758ab, type: 3}
   entityName: Plasmazelle
   description: For Timmy!!!!!!!!!!!
-  dnaCost: 3
+  dnaCost: 25
   faction: 0
   level: 1
   hp: 10
   maxHp: 10
-  damage: 2
+  damage: 3
   resistance: 0
   baseAttackspeed: 1
   attackSpeedMultiplier: 1.5
   projectileSpeed: 50
   size: 0.2
-  moveSpeed: 0.5
+  baseMoveSpeed: 15
+  moveSpeedMod: 1
+  moveSpeedPenalty: 0
   stamina: 50
   maxStamina: 100
   stunValue: 0
@@ -496,6 +498,7 @@ MonoBehaviour:
   attackOnCooldown: 0
   locksOnTarget: 0
   shootSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+  attackSound: {fileID: 0}
 --- !u!82 &2777199402429518109
 AudioSource:
   m_ObjectHideFlags: 0

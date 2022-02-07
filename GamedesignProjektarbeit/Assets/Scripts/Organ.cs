@@ -10,13 +10,24 @@ public class Organ : MonoBehaviour
     public float startHealth;
     public bool alive;
 
-    public float currentHealth;
+    private float currentHealth;
     private float healthPercantage;
 
     private Animator organAnimator;
     public GameObject gameOverScreen;
     public CameraShake cameraShake;
-    
+
+    public float CurrentHealth { get => currentHealth; 
+        set
+        {
+            currentHealth = value;
+            //berechne den Prozentwert Für die Healthbar
+            healthPercantage = currentHealth / (float)startHealth * 100;
+            GameManager.instance.hpBar.fillAmount = healthPercantage / 100f;
+            
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +43,8 @@ public class Organ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+
     }
 
 
@@ -45,14 +56,13 @@ public class Organ : MonoBehaviour
             organAnimator.SetTrigger("getDamage"); // spiele die Animation get Damage ab
 
             //Ziehe den Schaden vom Aktuellen Leben ab
-            currentHealth = currentHealth - damage;
+            CurrentHealth = CurrentHealth - damage;
 
             //Shakes Camera when damage is taken
             StartCoroutine(cameraShake.Shake(0.2f, 0.5f));
 
-            //berechne den Prozentwert Für die Healthbar
-            healthPercantage = currentHealth / (float)startHealth * 100;
-            GameManager.instance.hpBar.fillAmount = healthPercantage / 100f;
+            
+
             CheckAlive();
         }
         
@@ -61,7 +71,7 @@ public class Organ : MonoBehaviour
     public bool CheckAlive()
     {
         //Überprüfe ob das Organ noch Leben hat und setze die Variable Alife dem entsprechend
-        if (currentHealth < 0)
+        if (CurrentHealth < 0)
         {
             alive = false;
             organAnimator.SetBool("isAlive", false);

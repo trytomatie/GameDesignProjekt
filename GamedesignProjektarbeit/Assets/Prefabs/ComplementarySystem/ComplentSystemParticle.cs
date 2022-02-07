@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class ComplentSystemParticle : MonoBehaviour
 {
+    public Sprite[] sprites;
     private StatusManager attachedObject;
+
+    private void Update()
+    {
+        if(attachedObject == null)
+        {
+            transform.Rotate(0, 0, 360 * Time.deltaTime);
+        }
+          
+    }
     private void Start()
     {
+        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
         Destroy(gameObject, 15f);
     }
     private void OnTriggerEnter2D(Collider2D collision)

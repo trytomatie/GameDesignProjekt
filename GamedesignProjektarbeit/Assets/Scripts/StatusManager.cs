@@ -26,7 +26,10 @@ public class StatusManager : MonoBehaviour
     private float attackspeed = 1;
     public float projectileSpeed = 2;
     public float size = 0.2f;
-    public float moveSpeed = 0.5f;
+    private float moveSpeed = 0.5f;
+    public float baseMoveSpeed = 15;
+    public float moveSpeedMod = 1;
+    public float moveSpeedPenalty = 0;
     public int stamina = 50;
     [HideInInspector]
     public int maxStamina = 100;
@@ -69,8 +72,8 @@ public class StatusManager : MonoBehaviour
 
         if(stunValue > 3)
         {
-            StartCoroutine(SetMoveSpeed(moveSpeed, 3f));
-            moveSpeed = 0;
+            StartCoroutine(SetMoveSpeed(moveSpeedMod, 3f));
+            moveSpeedMod = 0;
             stunValue = 0;
         }
     }
@@ -78,7 +81,7 @@ public class StatusManager : MonoBehaviour
     IEnumerator SetMoveSpeed(float amount, float delay)
     {
         yield return new WaitForSeconds(delay);
-        moveSpeed = amount;
+        moveSpeedMod = amount;
     }
 
     private void BaseDeathEvent()
@@ -123,6 +126,14 @@ public class StatusManager : MonoBehaviour
         get 
         {
             return baseAttackspeed * attackSpeedMultiplier;
+        }
+    }
+
+    public float MoveSpeed
+    {
+        get
+        {
+            return (baseMoveSpeed - moveSpeedPenalty) * moveSpeedMod;
         }
     }
 }

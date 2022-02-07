@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5578616276906289391}
   - component: {fileID: 5578616276906289390}
-  - component: {fileID: 5578616276906289389}
   - component: {fileID: 5578616276906289388}
   - component: {fileID: 5578616276906289395}
+  - component: {fileID: 3440712196398414673}
   m_Layer: 0
   m_Name: ComplementParticle
   m_TagString: Untagged
@@ -85,18 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5578616276906289389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5578616276906289394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c661ef7e0e120e9498eb509a55f53d8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &5578616276906289388
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +122,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3440712196398414673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578616276906289394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c661ef7e0e120e9498eb509a55f53d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: baea679e91622324592a919ba810f879, type: 3}
+  - {fileID: 21300000, guid: 39de4fbbcf045b34cbc8a98a18203b6f, type: 3}
+  - {fileID: 21300000, guid: 3331fd299ed9b71499b109aaee6b2f90, type: 3}
