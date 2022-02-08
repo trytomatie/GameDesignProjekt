@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();                                                               //get Animator Component (Markus)
         currentPos = new Vector2(transform.position.x, transform.position.y);                                   //set both Positions so there are not null (Markus)
         lastPos = new Vector2(transform.position.x, transform.position.y);
-        myStatus.maxHp *= myStatus.level;
+        myStatus.maxHp *=Mathf.CeilToInt(myStatus.level * 1.25f);
         myStatus.Hp = myStatus.maxHp;
         myStatus.dnaCost *= myStatus.level;
 

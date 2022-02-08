@@ -94,11 +94,11 @@ public class GameManager : MonoBehaviour
     /// Loads this scene again
     /// by Dilara Durmus
     /// </summary>
-    public void TryAgain()
+    public void TryAgain(int scene)
 
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene);
     }
 
     /// <summary>

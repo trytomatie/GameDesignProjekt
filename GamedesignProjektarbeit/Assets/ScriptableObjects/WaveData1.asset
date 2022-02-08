@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bacteriaCount: 3
   virusCount: 3
-  spawnDelay: 2
+  spawnDelay: 3

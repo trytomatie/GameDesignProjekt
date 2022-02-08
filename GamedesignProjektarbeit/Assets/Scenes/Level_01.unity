@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3696956054011487185, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
+      propertyPath: m_TagString
+      value: Organ
+      objectReference: {fileID: 0}
     - target: {fileID: 3696956054011487188, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
       propertyPath: gameOver
       value: 
@@ -206,6 +210,18 @@ PrefabInstance:
       propertyPath: gameOverAudioSource
       value: 
       objectReference: {fileID: 1858623655}
+    - target: {fileID: 3696956054011487189, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696956054011487190, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
+      propertyPath: m_Radius
+      value: 6.718712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696956054011487190, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.052410297
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244dfac4bff567e449e333809af04e6f, type: 3}
 --- !u!1 &1413636
@@ -1741,9 +1757,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "The complement system, a part of the innate immune system, consists of
-    a number of small proteins found in the blood, made by the liver. \n\nit helps
-    or \u201Ccomplements\u201D the ability of antibodies and phagocytic cells to
-    clear pathogens from an organism. - Small but impactful!"
+    a number of small proteins found in the blood, made by the liver. \n\nthey stick
+    to the enemy and slow them down while calling other cells for help. - Small but
+    impactful!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -4423,7 +4439,7 @@ MonoBehaviour:
     They destroy
     bacteria during an infection. They are very fast and consist of  tiny granules
     full of enzymes and peptides which chop up the bacteria after they have taken
-    them in - impressive, isn''t it?'
+    them in. - impressive, isn''t it?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -4722,7 +4738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430678648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.297, y: 1.018, z: 0}
+  m_LocalPosition: {x: -4.584, y: 1.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 727770576}
@@ -4920,8 +4936,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d7d7a381b28757a49b690e964c203a91, type: 2}
   - {fileID: 11400000, guid: 9a732b62c619b3048b3697561c9f6910, type: 2}
   - {fileID: 11400000, guid: cdec64805ae6396418d53b8a36aa3443, type: 2}
-  - {fileID: 11400000, guid: 71f05b6da84582742b6c34ac6724e46c, type: 2}
-  - {fileID: 11400000, guid: 71f05b6da84582742b6c34ac6724e46c, type: 2}
   - {fileID: 11400000, guid: 71f05b6da84582742b6c34ac6724e46c, type: 2}
   currentWaveData: {fileID: 0}
   spawnDelay: 5
@@ -7784,11 +7798,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1316672338}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: TryAgain
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8373,6 +8387,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2130484176}
+        m_TargetAssemblyTypeName: LoadLevel, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &707536057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8726,12 +8752,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'macrophages  are white blood cells within tissues.
+  m_text: 'macrophages  are white blood cells within tissues and the first to arrive
+    on the scene.
 
 
-    They protect
-    the body by eating dirt, bacteria and dead or dying cells. They are important
-    for fighting infections and helping general immunity - Yummy!'
+    They protect the body by eating dirt, bacteria and dead or
+    dying cells. They are important for fighting infections and helping general immunity
+    - Yummy!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -8832,7 +8859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740889302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.758, y: 0.983, z: 0}
+  m_LocalPosition: {x: -3.965, y: 0.983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 727770576}
@@ -18360,7 +18387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 349, y: 58}
+  m_AnchoredPosition: {x: 349, y: 70}
   m_SizeDelta: {x: 571.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671497315
@@ -18388,8 +18415,8 @@ MonoBehaviour:
 
     They are
     a vital part of the adaptive immune system. It''s main function is producing
-    antibodies against antigens. they may also perform the role of antigen-presenting
-    cells - so be careful dangerous virus!'
+    antibodies which render the enemy useless. they may also perform the role of
+    antigen-presenting cells - so be careful dangerous virus!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
   m_sharedMaterial: {fileID: -4338580234052243667, guid: c994133af8d83c44cb20b0368b14160e, type: 2}
@@ -18666,7 +18693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679830897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.036, y: 1.009, z: 0}
+  m_LocalPosition: {x: -4.31, y: 1.009, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 727770576}
@@ -20343,6 +20370,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &1858623656
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858623653}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1891364891
 GameObject:
   m_ObjectHideFlags: 0
@@ -21829,6 +21877,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127524732}
   m_CullTransparentMesh: 1
+--- !u!1 &2130484175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130484177}
+  - component: {fileID: 2130484176}
+  m_Layer: 0
+  m_Name: LoadNextLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2130484176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130484175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d8ad346542c9d409d4f505978ef2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2130484177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130484175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -76.278175, y: -6.9334154, z: -633.9766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140509493
 GameObject:
   m_ObjectHideFlags: 0

@@ -906,7 +906,7 @@ MonoBehaviour:
   level: 1
   hp: 10
   maxHp: 10
-  damage: 5
+  damage: 7
   resistance: 0
   baseAttackspeed: 1
   attackSpeedMultiplier: 1
