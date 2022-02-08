@@ -25,6 +25,7 @@ public class UnitButton : MonoBehaviour
     {
         costText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         costText.text = "Buy for " + einheit.GetComponent<StatusManager>().dnaCost;
+        holdingUnit = false;
     }
 
     // Update is called once per frame
