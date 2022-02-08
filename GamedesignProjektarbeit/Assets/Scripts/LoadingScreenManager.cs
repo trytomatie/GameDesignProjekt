@@ -19,6 +19,7 @@ public class LoadingScreenManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         LoadScreen(LoadLevel.loadScene);
     }
 
