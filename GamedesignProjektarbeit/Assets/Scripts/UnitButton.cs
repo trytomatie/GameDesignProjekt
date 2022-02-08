@@ -41,6 +41,7 @@ public class UnitButton : MonoBehaviour
         {
             targetedUnit.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        
     }
 
     /// <summary>
@@ -48,8 +49,10 @@ public class UnitButton : MonoBehaviour
     /// </summary>
     public static void CheckForPlaceUnit()
     {
-        if(holdingUnit && !placeDelay)
+
+        if (holdingUnit && !placeDelay)
         {
+            targetedUnit.GetComponent<SpriteRenderer>().enabled = false;
             bool canPlace = true;
             RaycastHit2D[] raycastHits =  Physics2D.CircleCastAll(targetedUnit.transform.position, targetedUnit.GetComponent<CircleCollider2D>().radius * targetedUnit.transform.localScale.x, Vector2.zero);
             foreach(RaycastHit2D raycastHit in raycastHits)
@@ -57,6 +60,7 @@ public class UnitButton : MonoBehaviour
                 if(raycastHit.collider.gameObject != targetedUnit && raycastHit.collider.gameObject.tag !="Enemy")
                 {
                     canPlace = false;
+                    targetedUnit.GetComponent<SpriteRenderer>().enabled = true;
                 }
             }
             if(Input.GetMouseButtonDown(0) && canPlace)
@@ -93,7 +97,7 @@ public class UnitButton : MonoBehaviour
             {
                 component.enabled = true;
             }
-            targetedUnit.GetComponent<SpriteRenderer>().color = Color.white;
+            targetedUnit.GetComponent<SpriteRenderer>().enabled = false;
             targetedUnit = null;
             holdingUnit = false;
 
