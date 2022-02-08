@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 708837d2ad7472d4eb4973a65b4758ab, type: 3}
-  entityName: Plasmazelle
+  entityName: Plasma Cell
   description: For Timmy!!!!!!!!!!!
   dnaCost: 50
   upgradeCost: 25
