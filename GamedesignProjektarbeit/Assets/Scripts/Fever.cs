@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// by Christian Scherzer
+/// </summary>
 public class Fever : MonoBehaviour
 {
     public CameraShake cameraShake;
@@ -22,6 +24,9 @@ public class Fever : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Purcheses Fever
+    /// </summary>
     public void PurchaseFeverSystem()
     {
         if (GameManager.instance.Dna >= cost)
@@ -34,14 +39,21 @@ public class Fever : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reset the animation and end effect
+    /// </summary>
     private void ResetAnimation()
     {
         fevorVfx.SetBool("Animate", false);
         CancelInvoke("FevorEffect");
     }
+    /// <summary>
+    /// Fevor Effect
+    /// </summary>
     private void FevorEffect()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        // Damage all enemys
         foreach(GameObject enemy in enemys)
         {
             enemy.GetComponent<StatusManager>().ApplyDamage(fevorStrength * enemy.GetComponent<StatusManager>().level);

@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// By Christian Scherzer
+/// </summary>
 public class Projectile : MonoBehaviour
 {
 
@@ -23,7 +26,15 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject,10f);
     }
 
-    public void Instanciate(StatusManager origin, int damage,float projectileSpeed, Transform target, bool lockOn)
+    /// <summary>
+    /// Initializes Projectile
+    /// </summary>
+    /// <param name="origin"></param>
+    /// <param name="damage"></param>
+    /// <param name="projectileSpeed"></param>
+    /// <param name="target"></param>
+    /// <param name="lockOn"></param>
+    public void Initialize(StatusManager origin, int damage,float projectileSpeed, Transform target, bool lockOn)
     {
         this.origin = origin;
         this.damage = damage;
@@ -38,6 +49,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check for target
         if(target != null)
         {
             MoveToTarget(target);
@@ -50,15 +62,19 @@ public class Projectile : MonoBehaviour
             // Moves to last target Position
             rb.velocity = targetDirectionOnAttackDeclaration * projectileSpeed;
         }
-        if (target != null && target.GetComponent<StatusManager>().Hp < 0 && lockOn == true)  
-        
+        if (target != null && target.GetComponent<StatusManager>().Hp < 0 && lockOn == true)    
         {
             Destroy(gameObject);
         }
     }
 
+    /// <summary>
+    /// Moves to target 
+    /// </summary>
+    /// <param name="target"></param>
     private void MoveToTarget(Transform target)
     {
+        // Check if projectile is locked on target or not
         if(lockOn && target != null)
         {
             rb.velocity = GameManager.NormalizedDirection(transform.position, (Vector2)target.position) * projectileSpeed;
@@ -72,12 +88,19 @@ public class Projectile : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Apply Damage to target
+    /// </summary>
+    /// <param name="other"></param>
     private void ApplyDamage(StatusManager other)
     {
         other.ApplyDamage(damage);
     }
 
+    /// <summary>
+    /// Apply Stun to target
+    /// </summary>
+    /// <param name="other"></param>
     private void ApplyStun(StatusManager other)
     {
         other.stunValue += stunValue;

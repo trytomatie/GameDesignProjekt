@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,10 +17,14 @@ public class UnitButton : MonoBehaviour
     public static bool placeDelay;
 
     public static UnityEvent unitAudio;
+    private TextMeshProUGUI costText;
+
+    private int baseDnaCost;
     // Start is called before the first frame update
     void Start()
     {
-        
+        costText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        costText.text = "Buy for " + einheit.GetComponent<StatusManager>().dnaCost;
     }
 
     // Update is called once per frame

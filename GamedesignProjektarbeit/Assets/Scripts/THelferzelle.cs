@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// By Christian Scherzer and Shaina Milde
+/// </summary>
 public class THelferzelle : MonoBehaviour
 {
     public float radius;
@@ -29,6 +32,10 @@ public class THelferzelle : MonoBehaviour
         upgradeText.text = myStatus.level.ToString();
     }
 
+    /// <summary>
+    /// Gives Stamina to all nearby units
+    /// by Christian Scherzer
+    /// </summary>
     private void GiveStamina()
     {
         GameObject[] array = GameObject.FindGameObjectsWithTag("Player");

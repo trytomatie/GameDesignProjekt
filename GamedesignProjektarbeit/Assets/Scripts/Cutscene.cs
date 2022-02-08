@@ -8,7 +8,7 @@ public class Cutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("LoadLevelSelection", 23f);
+        Invoke("LoadLevelSelection", 30f);                  //automatically forwards player to level selection after cutscene is done (Shaina)
     }
     
     public void LoadLevelSelection ()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FollowPath : MonoBehaviour
 {
     public Transform[] waypoints;
@@ -35,6 +36,9 @@ public class FollowPath : MonoBehaviour
         Move();
     }
 
+    /// <summary>
+    /// Moves to target
+    /// </summary>
     void Move ()
     {
 

@@ -5,21 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     /// <summary>
-    /// Exits Game
-    /// by Dilara
+    /// Closes Application
+    /// by Dilara Durmus
     /// </summary>
     public void QuitGame()
     {
@@ -28,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     /// <summary>
     /// Opens Cutscene
-    /// by Dilara
+    /// by Dilara Durmus
     /// </summary>
     public void NewGame()
 

@@ -34,6 +34,9 @@ public class Makrophage : BasicTurretAI
         upgradeText.text = myStatus.level.ToString();
     }
 
+    /// <summary>
+    /// Checks Cooldown of attack
+    /// </summary>
     private void CheckCoolDown()
     {
         if (Time.time >= timerSetTime+ Mathf.Clamp(1 / myStatus.Attackspeed, 0.01f, 100f)) //wenn der Cooldown vorueber kann die Macrophage wieder angreifen
@@ -43,7 +46,6 @@ public class Makrophage : BasicTurretAI
     }
 
     
-
     private void OnTriggerStay2D(Collider2D other)      //on trigger stay um in der Teorie beim 2ten schlag alle in der Triggerzone zu Attackieren
     {
         if (other.gameObject.CompareTag("Enemy"))   //falls ein gegnerrisches Bakterium den Trigger Collider eindring

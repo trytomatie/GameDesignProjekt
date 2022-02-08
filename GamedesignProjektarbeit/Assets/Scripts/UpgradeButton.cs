@@ -5,13 +5,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// By Christian Scherzer
+/// </summary>
 public class UpgradeButton : MonoBehaviour
 {
     public TextMeshProUGUI descriptionText;
     public Image sprite;
 
-    public float damageMultiplier = 1.5f;
-    public float attackSpeedGain = 0.25f;
+    public float damageMultiplier = 1.125f;
+    public float attackSpeedGain = 0.125f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,22 +35,34 @@ public class UpgradeButton : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Upgrade Unit
+    /// </summary>
     public void Upgrade()
     {
         StatusManager statusmanager = DescriptionManager.instance.currentObject;
-        int upgradeCost = Mathf.CeilToInt(statusmanager.dnaCost * 2f);
+        int upgradeCost = UpgradeCost();
         if (CheckForCost(upgradeCost))
         {
 
-            statusmanager.damage = Mathf.CeilToInt(statusmanager.damage * damageMultiplier);
+            statusmanager.damage = Mathf.CeilToInt(statusmanager.damage * damageMultiplier) + 1;
             statusmanager.baseAttackspeed = statusmanager.baseAttackspeed += attackSpeedGain;
-            statusmanager.dnaCost = upgradeCost;
+            statusmanager.upgradeCost = Mathf.CeilToInt((statusmanager.upgradeCost) * 2.5f);
             GameManager.instance.Dna -= upgradeCost;
             statusmanager.level++;
         }
 
     }
 
+    private int UpgradeCost()
+    {
+        StatusManager statusmanager = DescriptionManager.instance.currentObject;
+        return Mathf.CeilToInt((statusmanager.upgradeCost));
+    }
+
+    /// <summary>
+    /// Shows Statuschanges when hoverd over Upgradebutton
+    /// </summary>
     public void HoverUpgrade()
     {
 
@@ -55,10 +71,14 @@ public class UpgradeButton : MonoBehaviour
     "Level: " + statusmanager.level + "->" + (statusmanager.level + 1) + "\n" +
     "Attackdamage: " + statusmanager.damage + "->" + statusmanager.damage * damageMultiplier + "\n" +
     "Attackspeed: " + statusmanager.Attackspeed + "->" + (statusmanager.Attackspeed + attackSpeedGain).ToString(".00") + "\n" +
-    "Upgradecost: " + statusmanager.dnaCost * 2f + "->" + statusmanager.dnaCost * 2 * 2;
+    "Upgradecost: " + UpgradeCost() + "->" + Mathf.CeilToInt((statusmanager.upgradeCost) * 2.5f);
         descriptionText.text = descText;
     }
 
+    /// <summary>
+    /// Raycast myself
+    /// </summary>
+    /// <returns></returns>
     public bool RaycastMyself()
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);

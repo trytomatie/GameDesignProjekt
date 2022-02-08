@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// By Markus Schwalb
+/// </summary>
 public class SterneLevelAuswahl : MonoBehaviour
 {
     public int levelAnzahl;

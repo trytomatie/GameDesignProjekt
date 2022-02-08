@@ -65,6 +65,7 @@ public class SpawnManager : MonoBehaviour
 
     /// <summary>
     /// Creates Bacteria at Spawn Point
+    /// by Shaina Milde
     /// </summary>
     private void SpawnBacteria ()
     {
@@ -74,6 +75,7 @@ public class SpawnManager : MonoBehaviour
 
     /// <summary>
     /// Creates Virus at Spawn Point
+    /// by Shaina Milde
     /// </summary>
     private void SpawnVirus ()
     {
@@ -84,6 +86,7 @@ public class SpawnManager : MonoBehaviour
 
     /// <summary>
     /// Enemies are spawned ... Stops spawning enemies once the bacteri and virusCount reaches 0
+    /// by Shaina Milde
     /// </summary>
     void SpawnEnemy ()
     {
@@ -106,7 +109,8 @@ public class SpawnManager : MonoBehaviour
     }
 
     /// <summary>
-    /// If the round has ended, a new round will start after 30 seconds
+    /// If the round has ended, a new round will start after the timer reaches 0
+    /// by Shaina Milde
     /// </summary>
     void EndRound ()
     {
@@ -115,9 +119,9 @@ public class SpawnManager : MonoBehaviour
             hasRoundEnded = true;
             if(currentWave == waves.Length)
             {
-                wonDialog.SetActive(true);
-                winDialogAudioSource.PlayOneShot(winSound, 0.2f);
-                Time.timeScale = 0;
+                wonDialog.SetActive(true);                                          // if the current round is the last one, you win the game (Dilara)
+                winDialogAudioSource.PlayOneShot(winSound, 0.2f);                   // plays sound when the game is won (Shaina)
+                Time.timeScale = 0;                                                 // freezes the game (Shaina)
                 return;
             }
             Invoke("StartNewWave", startTime);
@@ -128,7 +132,8 @@ public class SpawnManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// if the enemy count has reached 0, the round is over
+    /// by Shaina Milde
     /// </summary>
     void CheckWaveEnd()
     {
@@ -139,7 +144,8 @@ public class SpawnManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Starts new wave
+    /// by Shaina Milde
     /// </summary>
     void StartNewWave()
     {
@@ -155,6 +161,10 @@ public class SpawnManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Starts new wave
+    /// by Shaina Milde
+    /// </summary>
     public void StartTimer()
     {
         currentTime = currentTime - 1;

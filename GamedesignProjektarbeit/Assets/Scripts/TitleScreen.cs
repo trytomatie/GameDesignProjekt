@@ -22,17 +22,22 @@ public class TitleScreen : MonoBehaviour
        MoveEnemy();  
     }
 
+    /// <summary>
+    /// Moves Enemy with a certain Speed
+    /// by Shaina Milde
+    /// </summary>
     public void MoveEnemy()
     {
         rb.velocity = direction * movementSpeed;
-
-
     }
 
+    /// <summary>
+    /// Closes Application
+    /// by Dilara Durmus
+    /// </summary>
     public void QuitGame()
     {
         Application.Quit(0);
-
     }
 
 

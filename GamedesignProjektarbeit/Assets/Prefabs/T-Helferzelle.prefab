@@ -1208,7 +1208,8 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: c847183944add8e498f5eb5c2c8156e5, type: 3}
   entityName: T-Helferzelle
   description: I love to help <3
-  dnaCost: 50
+  dnaCost: 100
+  upgradeCost: 75
   faction: 0
   level: 1
   hp: 10
@@ -1222,7 +1223,6 @@ MonoBehaviour:
   baseMoveSpeed: 15
   moveSpeedMod: 1
   moveSpeedPenalty: 0
-  stamina: 50
   maxStamina: 100
   stunValue: 0
   isActive: 0

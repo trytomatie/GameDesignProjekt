@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Depricated
+/// by Markus Schwalb
+/// </summary>
 public class TestScriptMovingEnemy : MonoBehaviour
 {
 

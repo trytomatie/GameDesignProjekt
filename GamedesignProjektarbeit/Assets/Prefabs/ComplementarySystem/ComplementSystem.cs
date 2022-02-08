@@ -10,15 +10,23 @@ public class ComplementSystem : MonoBehaviour
 
     public float duration;
 
+    public AudioClip bubbleSound;
+    public AudioSource csAudioSource;
+
     private void Start()
     {
         // Invoke("PurchaseComplementSystem",30);
+
+        csAudioSource = GetComponent<AudioSource>();
     }
     public void PurchaseComplementSystem()
     {
         if (GameManager.instance.Dna >= cost && !fluid.GetBool("Animate"))
         {
             fluid.SetBool("Animate", true);
+
+            csAudioSource.PlayOneShot(bubbleSound, 0.2f);
+
             GameManager.instance.Dna -= cost;
             InvokeRepeating("SpawnParticles", 0, 0.1f);
             Invoke("StopParticlesSpawn", duration);

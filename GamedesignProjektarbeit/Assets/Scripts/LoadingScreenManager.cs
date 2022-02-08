@@ -24,14 +24,28 @@ public class LoadingScreenManager : MonoBehaviour
 
     private void Update()
     {
+        LoadinScreenDots();
+    }
+
+    /// <summary>
+    /// Shows Dots depending on dotAmount(Animated Value)
+    /// by Christian Scherzer
+    /// </summary>
+    private void LoadinScreenDots()
+    {
         string text = "Loading ";
-        for(int i = 0; i < dotAmount;i++)
+        for (int i = 0; i < dotAmount; i++)
         {
             text += ".";
         }
         loadingScreenText.text = text;
     }
 
+    /// <summary>
+    /// Loads screen
+    /// by Shaina Milde
+    /// </summary>
+    /// <param name="sceneIndex"></param>
     public void LoadScreen (int sceneIndex)
     {
         slider.fillAmount = 0f;
@@ -39,6 +53,12 @@ public class LoadingScreenManager : MonoBehaviour
         StartCoroutine(LoadingScreen(sceneIndex));
     }
 
+    /// <summary>
+    /// Corutine for loading screen
+    /// by Shaina Milde
+    /// </summary>
+    /// <param name="sceneIndex"></param>
+    /// <returns></returns>
     private IEnumerator LoadingScreen(int sceneIndex)
     {
         loadingScreen.SetActive(true);
@@ -47,12 +67,13 @@ public class LoadingScreenManager : MonoBehaviour
 
         while (async.isDone == false)
         {
-            //slider.fillAmount = async.progress;
+            //slider.fillAmount = async.progress; // Fills amount dependinding on progress (Commented out to show loading screen)
 
             print(slider);
             if (async.progress == 0.9f)
             {
                 float time = 0;
+                // Makes sure to show loading screen for 5 seconds (Just to show it off)
                 while(time <= 5)
                 {
                     slider.fillAmount = time / 5f;

@@ -40,6 +40,10 @@ public class BasicTurretAI : MonoBehaviour
         upgradeText.text = myStatus.level.ToString();
     }
 
+    /// <summary>
+    /// Checks for Attacks
+    /// by Christian Scherzer
+    /// </summary>
     protected void CheckAttack()
     {
         if (target != null && Vector3.Distance(target.transform.position, transform.position) < attackRadius && !attackOnCooldown)
@@ -47,51 +51,62 @@ public class BasicTurretAI : MonoBehaviour
             // Attack
             ShootProjectile();
         }
-        else
-        {
-            
-        }
     }
 
+    /// <summary>
+    /// Shoots Projectile
+    /// by Christian Scherzer, Dilara Durmus and Shaina Milde
+    /// </summary>
     private void ShootProjectile()
     {
-        myStatus.Stamina-= 2;
-        projectilePrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];
+        myStatus.Stamina-= 2;                                                                                                   // decreases stamina by fixed amount
+        projectilePrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];                                        // chooses random projectile prefab
         GameObject go = Instantiate(projectilePrefab, transform.position - new Vector3(0,0,-10), Quaternion.identity);
         Projectile projectile = go.GetComponent<Projectile>();
-        projectile.Instanciate(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
+        projectile.Initialize(myStatus, myStatus.damage, myStatus.projectileSpeed, target, locksOnTarget);
         attackOnCooldown = true;
-        float attackCooldown =  Mathf.Clamp(1 / myStatus.Attackspeed,0.01f,100f);
+        float attackCooldown =  Mathf.Clamp(1 / myStatus.Attackspeed,0.01f,100f);                                               // sets attack cooldown according to attack speed, kept at 100 attacks per second
         Invoke("AttackCooldown", attackCooldown);
 
-        turretAudioSource.PlayOneShot(shootSound, 0.1f);
-        
+        turretAudioSource.PlayOneShot(shootSound, 0.1f);  
     }
 
+    /// <summary>
+    /// Ressets Attack Cooldown
+    /// by Christian Scherzer
+    /// </summary>
     private void AttackCooldown()
     {
         attackOnCooldown = false;
     }
 
     
-
+    /// <summary>
+    /// Finds a target
+    /// </summary>
+    /// <returns></returns>
     protected bool FindTarget()
     {
+        // Get all targets available
         StatusManager[] targets = GameObject.FindObjectsOfType<StatusManager>(true);
         float distance = 1000;
+        // Search all targets
         foreach (StatusManager target in targets)
         {
+            // Ignore targets from own faction
             if(target.faction == myStatus.faction)
             {
                 continue;
             }
             float targetDistance = Vector2.Distance(transform.position, target.transform.position);
+            // Asign target that is closest to me as main target
             if (targetDistance < distance && target.GetComponent<StatusManager>().Hp > 0)
             {
                 distance = targetDistance;
                 this.target = target.transform;
             }
         }
+        // Returns if target was found or not
         if (target != null)
         {
             return true;

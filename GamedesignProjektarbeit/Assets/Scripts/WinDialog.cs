@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// By Shaina Milde
+/// </summary>
 public class WinDialog : MonoBehaviour
 {
     public Toggle point01;
@@ -15,7 +18,7 @@ public class WinDialog : MonoBehaviour
     void Start()
     {
         organ = GameObject.FindObjectOfType<Organ>();
-        float hpPercentage = organ.healthPercentage();
+        float hpPercentage = organ.HealthPercentage();
 
         if (hpPercentage >= 100)
         {
@@ -35,9 +38,4 @@ public class WinDialog : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

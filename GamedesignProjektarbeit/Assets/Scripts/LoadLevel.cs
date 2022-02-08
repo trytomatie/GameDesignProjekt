@@ -7,20 +7,10 @@ public class LoadLevel : MonoBehaviour
 {
     public static int loadScene;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     /// <summary>
     /// Speichere die Zu ladene Szene und lade den Loadingscreen
+    /// by Markus Schwalb
     /// </summary>
     /// <param name="index"></param>
     public void LoadScene(int sceneIndex) //
@@ -33,6 +23,7 @@ public class LoadLevel : MonoBehaviour
 
     /// <summary>
     /// lade die nächste Scene (in der Build herarchie)
+    /// by Markus Schwalb
     /// </summary>
     public void LoadNextSceene()
     {

@@ -5,17 +5,11 @@ using UnityEngine;
 public class TitleScreenBoundary : MonoBehaviour
 {
     public Vector2 multiplier;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>
+    /// Checks for collision for title screen bacteria and virus
+    /// </summary>
+    /// <param name="collision"></param>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -14,6 +14,7 @@ public class StatusManager : MonoBehaviour
     public string entityName = "Unknown";
     public string description = "An unknown cell. Beware!";
     public int dnaCost = 5;
+    public int upgradeCost = 5;
 
     public Faction faction;
     public int level = 1;
@@ -50,6 +51,9 @@ public class StatusManager : MonoBehaviour
         InvokeRepeating("StaminaRegen", 0, 3f); 
     }
 
+    /// <summary>
+    /// Regenerates Stamina
+    /// </summary>
     private void StaminaRegen()
     {
         if(Stamina < maxStamina)
@@ -72,24 +76,44 @@ public class StatusManager : MonoBehaviour
 
         if(stunValue > 3)
         {
-            StartCoroutine(SetMoveSpeed(moveSpeedMod, 3f));
-            moveSpeedMod = 0;
-            stunValue = 0;
+            StunMe();
         }
     }
 
+    /// <summary>
+    /// Stuns entity for 3 seconds
+    /// </summary>
+    private void StunMe()
+    {
+        StartCoroutine(SetMoveSpeed(moveSpeedMod, 3f));
+        moveSpeedMod = 0;
+        stunValue = 0;
+    }
+
+    /// <summary>
+    /// Sets movespeed after a delay
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <param name="delay"></param>
+    /// <returns></returns>
     IEnumerator SetMoveSpeed(float amount, float delay)
     {
         yield return new WaitForSeconds(delay);
         moveSpeedMod = amount;
     }
 
+    /// <summary>
+    /// Base Death event 
+    /// </summary>
     public void BaseDeathEvent()
     {
         Destroy(gameObject);
     }
 
-
+    /// <summary>
+    /// Apply damage to me
+    /// </summary>
+    /// <param name="damage"></param>
     public void ApplyDamage(int damage)
     {
        

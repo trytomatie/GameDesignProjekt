@@ -304,7 +304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &283807529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 558107894}
   - component: {fileID: 558107896}
   - component: {fileID: 558107895}
+  - component: {fileID: 558107897}
   m_Layer: 5
   m_Name: MrImmunsystem Text 03
   m_TagString: Untagged
@@ -803,6 +804,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558107893}
   m_CullTransparentMesh: 1
+--- !u!114 &558107897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558107893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c955c8ddad4ee4c98702c1389f38d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.025
 --- !u!1 &570264827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,6 +1361,7 @@ GameObject:
   - component: {fileID: 856330637}
   - component: {fileID: 856330639}
   - component: {fileID: 856330638}
+  - component: {fileID: 856330640}
   m_Layer: 5
   m_Name: MrImmunsystem Text
   m_TagString: Untagged
@@ -1470,6 +1485,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856330636}
   m_CullTransparentMesh: 1
+--- !u!114 &856330640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856330636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c955c8ddad4ee4c98702c1389f38d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.025
 --- !u!1 &910264917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1107522179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2519,6 +2547,7 @@ GameObject:
   - component: {fileID: 1901018665}
   - component: {fileID: 1901018667}
   - component: {fileID: 1901018666}
+  - component: {fileID: 1901018668}
   m_Layer: 5
   m_Name: MrImmunsystem Text 02
   m_TagString: Untagged
@@ -2642,6 +2671,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901018664}
   m_CullTransparentMesh: 1
+--- !u!114 &1901018668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901018664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c955c8ddad4ee4c98702c1389f38d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.025
 --- !u!1 &1974163045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2016096756
 RectTransform:
   m_ObjectHideFlags: 0

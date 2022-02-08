@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// By Christian Scherzer
+/// </summary>
 public class UpgradeHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Sprite sprite;
@@ -10,7 +13,7 @@ public class UpgradeHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterH
     // Start is called before the first frame update
     void Start()
     {
-        normalSize = GetComponent<SpriteRenderer>().size;
+        normalSize = transform.localScale;
     }
 
     // Update is called once per frame
@@ -19,18 +22,30 @@ public class UpgradeHandler : MonoBehaviour, IPointerDownHandler, IPointerEnterH
         
     }
 
+    /// <summary>
+    /// Opens Upgrade Menu
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerDown(PointerEventData eventData)
     {
         DescriptionManager.instance.OpenDescription(sprite, GetComponent<StatusManager>());
     }
 
+    /// <summary>
+    /// Increases Scale on enter
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GetComponent<SpriteRenderer>().size = normalSize * 1.3f;
+        transform.localScale = normalSize * 1.2f;
     }
 
+    /// <summary>
+    /// Decreases Scale on exit
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerExit(PointerEventData eventData)
     {
-        GetComponent<SpriteRenderer>().size = normalSize;
+        transform.localScale = normalSize;
     }
 }

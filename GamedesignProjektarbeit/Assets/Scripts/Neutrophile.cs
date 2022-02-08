@@ -12,7 +12,7 @@ public class Neutrophile : BasicTurretAI
 
         turretAudioSource = GetComponent<AudioSource>();
 
-        Invoke("KillCell", 30);
+        Invoke("KillCell", 60);
     }
     // Update is called once per frame
     void Update()
@@ -24,6 +24,10 @@ public class Neutrophile : BasicTurretAI
 
     }
     
+    /// <summary>
+    /// Kills the Cell
+    /// by Dilara Durmus
+    /// </summary>
    void KillCell()
     {
         myStatus.ApplyDamage(10000);

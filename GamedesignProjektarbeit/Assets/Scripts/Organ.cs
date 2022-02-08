@@ -23,16 +23,7 @@ public class Organ : MonoBehaviour
     public AudioClip gameOver;
     public AudioSource gameOverAudioSource;
 
-    public float CurrentHealth { get => currentHealth; 
-        set
-        {
-            currentHealth = value;
-            //berechne den Prozentwert Für die Healthbar
-            healthPercantage = currentHealth / (float)startHealth * 100;
-            GameManager.instance.hpBar.fillAmount = healthPercantage / 100f;
-            
-        }
-    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,14 +40,13 @@ public class Organ : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
 
-    }
-
-
+    /// <summary>
+    /// Organ takes Damage
+    /// by Markus Schwalb
+    /// </summary>
+    /// <param name="damage"></param>
     public void OrganTakeDamage(float damage)
     {
         if (alive)
@@ -78,6 +68,11 @@ public class Organ : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Checks if Organ is alive
+    /// by Markus Schwalb
+    /// </summary>
+    /// <returns></returns>
     public bool CheckAlive()
     {
         //Überprüfe ob das Organ noch Leben hat und setze die Variable Alife dem entsprechend
@@ -99,13 +94,28 @@ public class Organ : MonoBehaviour
         return alive;
     }
 
-
-    public float healthPercentage()
+    /// <summary>
+    /// Returns hp in %
+    /// by Shaina Milde
+    /// </summary>
+    /// <returns></returns>
+    public float HealthPercentage()
     {
-
         healthPercantage = currentHealth / (float)startHealth * 100;
-
         return healthPercantage;
+    }
+
+    public float CurrentHealth
+    {
+        get => currentHealth;
+        set
+        {
+            currentHealth = value;
+            //berechne den Prozentwert Für die Healthbar
+            healthPercantage = currentHealth / (float)startHealth * 100;
+            GameManager.instance.hpBar.fillAmount = healthPercantage / 100f;
+
+        }
     }
 
 }

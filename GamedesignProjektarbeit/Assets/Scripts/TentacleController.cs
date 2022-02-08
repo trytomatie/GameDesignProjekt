@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Depricated
+/// by Christian Scherzer
+/// </summary>
 public class TentacleController : MonoBehaviour
 {
 
