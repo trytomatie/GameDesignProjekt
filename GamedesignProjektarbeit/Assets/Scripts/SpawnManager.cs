@@ -32,6 +32,9 @@ public class SpawnManager : MonoBehaviour
     public AudioClip winSound;
     public AudioSource winDialogAudioSource;
 
+    public AudioClip roundSound;
+    public AudioSource roundAudioSource;
+
     private int spawnedEnemies;
     private int currentWave = 0;
     private bool hasRoundEnded = false;
@@ -42,6 +45,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         winDialogAudioSource = GetComponent<AudioSource>();
+        roundAudioSource = GetComponent<AudioSource>();
 
         if (instance == null)
         {
@@ -124,10 +128,14 @@ public class SpawnManager : MonoBehaviour
                 Time.timeScale = 0;                                                 // freezes the game (Shaina)
                 return;
             }
+
             Invoke("StartNewWave", startTime);
             currentTime = startTime;
             InvokeRepeating("StartTimer", 0, 1);
             currentWave = currentWave + 1;
+
+            roundAudioSource.PlayOneShot(roundSound, 0.2f);
+            roundAudioSource.enabled = true;
         }
     }
 
@@ -149,6 +157,8 @@ public class SpawnManager : MonoBehaviour
     /// </summary>
     void StartNewWave()
     {
+        roundAudioSource.PlayOneShot(roundSound, 0.2f);
+
         currentWaveData = waves[currentWave - 1];
 
         enemyCount = currentWaveData.bacteriaCount + currentWaveData.virusCount;
